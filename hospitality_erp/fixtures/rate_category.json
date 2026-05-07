@@ -1,0 +1,8 @@
+[
+  {"doctype": "Rate Category", "name": "Rack Rate", "category_name": "Rack Rate", "is_active": 1},
+  {"doctype": "Rate Category", "name": "Corporate Rate", "category_name": "Corporate Rate", "is_active": 1},
+  {"doctype": "Rate Category", "name": "OTA Rate", "category_name": "OTA Rate", "is_active": 1},
+  {"doctype": "Rate Category", "name": "Package Rate", "category_name": "Package Rate", "is_active": 1},
+  {"doctype": "Rate Category", "name": "Day Use", "category_name": "Day Use", "is_active": 1},
+  {"doctype": "Rate Category", "name": "Complimentary", "category_name": "Complimentary", "is_active": 1}
+]

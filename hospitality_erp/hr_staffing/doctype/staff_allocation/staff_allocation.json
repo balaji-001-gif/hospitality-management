@@ -1,0 +1,92 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "property",
+    "allocation_date",
+    "department",
+    "staff_name",
+    "role",
+    "shift",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "SA-.YYYY.-"
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "allocation_date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "department",
+      "fieldtype": "Select",
+      "label": "Department",
+      "options": "\nFront Desk\nHousekeeping\nF&B\nSpa\nMaintenance\nSecurity\nAccounts",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "staff_name",
+      "fieldtype": "Data",
+      "label": "Staff Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "role",
+      "fieldtype": "Data",
+      "label": "Role"
+    },
+    {
+      "fieldname": "shift",
+      "fieldtype": "Link",
+      "label": "Shift",
+      "options": "Staff Shift"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "HR Staffing",
+  "name": "Staff Allocation",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "All"
+    }
+  ],
+  "title_field": "staff_name"
+}

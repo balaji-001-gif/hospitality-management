@@ -1,0 +1,5 @@
+/* Hospitality ERP — Custom Styles */
+.room-status-vacant-clean { color: #27ae60; font-weight: bold; }
+.room-status-vacant-dirty { color: #e67e22; font-weight: bold; }
+.room-status-occupied { color: #2980b9; font-weight: bold; }
+.room-status-out-of-order { color: #c0392b; font-weight: bold; }

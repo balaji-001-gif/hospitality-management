@@ -1,0 +1,151 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "title",
+    "property",
+    "room",
+    "reported_by",
+    "section_break_1",
+    "request_date",
+    "priority",
+    "status",
+    "category",
+    "column_break_1",
+    "assigned_to",
+    "expected_completion",
+    "actual_completion",
+    "section_break_2",
+    "description",
+    "resolution_notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "MR-.YYYY.-"
+    },
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Issue Title",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1
+    },
+    {
+      "fieldname": "room",
+      "fieldtype": "Link",
+      "label": "Room",
+      "options": "Room",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "reported_by",
+      "fieldtype": "Data",
+      "label": "Reported By"
+    },
+    {
+      "fieldname": "section_break_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "request_date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "default": "Today",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "priority",
+      "fieldtype": "Select",
+      "label": "Priority",
+      "options": "\nLow\nMedium\nHigh\nEmergency",
+      "default": "Medium",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nOpen\nAssigned\nIn Progress\nCompleted\nClosed",
+      "default": "Open",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "category",
+      "fieldtype": "Select",
+      "label": "Category",
+      "options": "\nPlumbing\nElectrical\nAC/HVAC\nCarpentry\nCleaning\nEquipment\nOther"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "assigned_to",
+      "fieldtype": "Data",
+      "label": "Assigned To"
+    },
+    {
+      "fieldname": "expected_completion",
+      "fieldtype": "Date",
+      "label": "Expected By"
+    },
+    {
+      "fieldname": "actual_completion",
+      "fieldtype": "Datetime",
+      "label": "Completed At"
+    },
+    {
+      "fieldname": "section_break_2",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Text Editor",
+      "label": "Description",
+      "reqd": 1
+    },
+    {
+      "fieldname": "resolution_notes",
+      "fieldtype": "Text",
+      "label": "Resolution Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Hotel Maintenance",
+  "name": "Maintenance Request",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "All",
+      "write": 1
+    }
+  ],
+  "title_field": "title"
+}

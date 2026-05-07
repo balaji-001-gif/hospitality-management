@@ -1,0 +1,11 @@
+[
+  {"doctype": "Channel", "name": "Direct", "channel_name": "Direct", "channel_type": "Direct", "commission_pct": 0, "is_active": 1},
+  {"doctype": "Channel", "name": "Walk-in", "channel_name": "Walk-in", "channel_type": "Walk-in", "commission_pct": 0, "is_active": 1},
+  {"doctype": "Channel", "name": "MakeMyTrip", "channel_name": "MakeMyTrip", "channel_type": "OTA", "commission_pct": 18, "is_active": 1},
+  {"doctype": "Channel", "name": "Agoda", "channel_name": "Agoda", "channel_type": "OTA", "commission_pct": 15, "is_active": 1},
+  {"doctype": "Channel", "name": "Booking.com", "channel_name": "Booking.com", "channel_type": "OTA", "commission_pct": 15, "is_active": 1},
+  {"doctype": "Channel", "name": "Expedia", "channel_name": "Expedia", "channel_type": "OTA", "commission_pct": 17, "is_active": 1},
+  {"doctype": "Channel", "name": "OYO", "channel_name": "OYO", "channel_type": "OTA", "commission_pct": 20, "is_active": 1},
+  {"doctype": "Channel", "name": "Corporate", "channel_name": "Corporate", "channel_type": "Corporate", "commission_pct": 0, "is_active": 1},
+  {"doctype": "Channel", "name": "Travel Agent", "channel_name": "Travel Agent", "channel_type": "Travel Agent", "commission_pct": 10, "is_active": 1}
+]

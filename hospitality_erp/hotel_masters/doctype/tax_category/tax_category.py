@@ -1,0 +1,3 @@
+from frappe.model.document import Document
+class TaxCategory(Document):
+    pass

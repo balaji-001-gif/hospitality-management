@@ -1,0 +1,67 @@
+{
+  "actions": [],
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "posting_date",
+    "description",
+    "charge_type",
+    "quantity",
+    "rate",
+    "amount",
+    "tax_category"
+  ],
+  "fields": [
+    {
+      "fieldname": "posting_date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Data",
+      "label": "Description",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "charge_type",
+      "fieldtype": "Select",
+      "label": "Charge Type",
+      "options": "\nRoom\nF&B\nSpa\nLaundry\nTelephone\nMinibar\nOther",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "quantity",
+      "fieldtype": "Float",
+      "label": "Qty",
+      "default": "1",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "rate",
+      "fieldtype": "Currency",
+      "label": "Rate",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "label": "Amount",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "tax_category",
+      "fieldtype": "Link",
+      "label": "Tax Category",
+      "options": "Tax Category"
+    }
+  ],
+  "module": "Reservations",
+  "name": "Guest Folio Item",
+  "owner": "Administrator",
+  "permissions": []
+}

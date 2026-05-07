@@ -1,0 +1,107 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "shift_name",
+    "property",
+    "department",
+    "section_break_1",
+    "shift_date",
+    "start_time",
+    "end_time",
+    "status",
+    "section_break_2",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "SHFT-.YYYY.-"
+    },
+    {
+      "fieldname": "shift_name",
+      "fieldtype": "Data",
+      "label": "Shift Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "department",
+      "fieldtype": "Select",
+      "label": "Department",
+      "options": "\nFront Desk\nHousekeeping\nF&B\nSpa\nMaintenance\nSecurity\nAccounts",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_break_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "shift_date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "start_time",
+      "fieldtype": "Time",
+      "label": "Start Time"
+    },
+    {
+      "fieldname": "end_time",
+      "fieldtype": "Time",
+      "label": "End Time"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nScheduled\nCompleted\nCancelled",
+      "default": "Scheduled"
+    },
+    {
+      "fieldname": "section_break_2",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "HR Staffing",
+  "name": "Staff Shift",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "All"
+    }
+  ],
+  "title_field": "shift_name"
+}

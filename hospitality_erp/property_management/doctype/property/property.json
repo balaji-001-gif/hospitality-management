@@ -1,0 +1,164 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "editable_grid": 1,
+  "field_order": [
+    "naming_series",
+    "property_name",
+    "property_type",
+    "status",
+    "section_break_1",
+    "address",
+    "city",
+    "state",
+    "country",
+    "column_break_1",
+    "phone",
+    "email",
+    "website",
+    "section_break_2",
+    "total_rooms",
+    "star_rating",
+    "company",
+    "section_break_3",
+    "description"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "PROP-.YYYY.-"
+    },
+    {
+      "fieldname": "property_name",
+      "fieldtype": "Data",
+      "label": "Property Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "property_type",
+      "fieldtype": "Link",
+      "label": "Property Type",
+      "options": "Property Type",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nActive\nInactive\nUnder Renovation",
+      "default": "Active",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_break_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Text",
+      "label": "Address"
+    },
+    {
+      "fieldname": "city",
+      "fieldtype": "Data",
+      "label": "City"
+    },
+    {
+      "fieldname": "state",
+      "fieldtype": "Data",
+      "label": "State"
+    },
+    {
+      "fieldname": "country",
+      "fieldtype": "Data",
+      "label": "Country"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "website",
+      "fieldtype": "Data",
+      "label": "Website"
+    },
+    {
+      "fieldname": "section_break_2",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "total_rooms",
+      "fieldtype": "Int",
+      "label": "Total Rooms"
+    },
+    {
+      "fieldname": "star_rating",
+      "fieldtype": "Select",
+      "label": "Star Rating",
+      "options": "\n1 Star\n2 Star\n3 Star\n4 Star\n5 Star"
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company"
+    },
+    {
+      "fieldname": "section_break_3",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Text Editor",
+      "label": "Description"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Property Management",
+  "name": "Property",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "report": 1,
+      "role": "All",
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "property_name",
+  "track_changes": 1
+}

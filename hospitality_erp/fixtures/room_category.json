@@ -1,0 +1,10 @@
+[
+  {"doctype": "Room Category", "name": "Standard", "category_name": "Standard", "is_active": 1},
+  {"doctype": "Room Category", "name": "Deluxe", "category_name": "Deluxe", "is_active": 1},
+  {"doctype": "Room Category", "name": "Superior", "category_name": "Superior", "is_active": 1},
+  {"doctype": "Room Category", "name": "Suite", "category_name": "Suite", "is_active": 1},
+  {"doctype": "Room Category", "name": "Junior Suite", "category_name": "Junior Suite", "is_active": 1},
+  {"doctype": "Room Category", "name": "Presidential Suite", "category_name": "Presidential Suite", "is_active": 1},
+  {"doctype": "Room Category", "name": "Villa", "category_name": "Villa", "is_active": 1},
+  {"doctype": "Room Category", "name": "Penthouse", "category_name": "Penthouse", "is_active": 1}
+]

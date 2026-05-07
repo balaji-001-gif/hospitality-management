@@ -1,0 +1,50 @@
+{
+  "actions": [],
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "ingredient",
+    "unit",
+    "quantity",
+    "cost_per_unit",
+    "total_cost"
+  ],
+  "fields": [
+    {
+      "fieldname": "ingredient",
+      "fieldtype": "Data",
+      "label": "Ingredient",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "unit",
+      "fieldtype": "Data",
+      "label": "Unit",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "quantity",
+      "fieldtype": "Float",
+      "label": "Quantity",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cost_per_unit",
+      "fieldtype": "Currency",
+      "label": "Cost Per Unit"
+    },
+    {
+      "fieldname": "total_cost",
+      "fieldtype": "Currency",
+      "label": "Total Cost",
+      "read_only": 1,
+      "in_list_view": 1
+    }
+  ],
+  "module": "FnB",
+  "name": "Recipe Item",
+  "owner": "Administrator",
+  "permissions": []
+}

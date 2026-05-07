@@ -1,0 +1,8 @@
+[
+  {"doctype": "Property Type", "name": "Hotel", "type_name": "Hotel", "is_active": 1},
+  {"doctype": "Property Type", "name": "Resort", "type_name": "Resort", "is_active": 1},
+  {"doctype": "Property Type", "name": "Boutique Hotel", "type_name": "Boutique Hotel", "is_active": 1},
+  {"doctype": "Property Type", "name": "Hostel", "type_name": "Hostel", "is_active": 1},
+  {"doctype": "Property Type", "name": "Villa", "type_name": "Villa", "is_active": 1},
+  {"doctype": "Property Type", "name": "Service Apartment", "type_name": "Service Apartment", "is_active": 1}
+]

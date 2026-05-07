@@ -1,0 +1,74 @@
+{
+  "actions": [],
+  "autoname": "field:table_number",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "table_number",
+    "outlet",
+    "capacity",
+    "status",
+    "current_order"
+  ],
+  "fields": [
+    {
+      "fieldname": "table_number",
+      "fieldtype": "Data",
+      "label": "Table Number",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "outlet",
+      "fieldtype": "Link",
+      "label": "Outlet",
+      "options": "Outlet",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "capacity",
+      "fieldtype": "Int",
+      "label": "Capacity"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nAvailable\nOccupied\nReserved\nCleaning",
+      "default": "Available",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "current_order",
+      "fieldtype": "Link",
+      "label": "Current Order",
+      "options": "FnB Order",
+      "read_only": 1
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "FnB",
+  "name": "Restaurant Table",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "All"
+    }
+  ],
+  "title_field": "table_number"
+}

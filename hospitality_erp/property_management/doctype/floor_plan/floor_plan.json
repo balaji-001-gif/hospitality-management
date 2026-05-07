@@ -1,0 +1,80 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "floor_name",
+    "property",
+    "floor_number",
+    "section_break_1",
+    "total_rooms",
+    "description"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "FP-.YYYY.-"
+    },
+    {
+      "fieldname": "floor_name",
+      "fieldtype": "Data",
+      "label": "Floor Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "floor_number",
+      "fieldtype": "Int",
+      "label": "Floor Number"
+    },
+    {
+      "fieldname": "section_break_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "total_rooms",
+      "fieldtype": "Int",
+      "label": "Total Rooms"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Text",
+      "label": "Description"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Property Management",
+  "name": "Floor Plan",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "All"
+    }
+  ],
+  "title_field": "floor_name"
+}

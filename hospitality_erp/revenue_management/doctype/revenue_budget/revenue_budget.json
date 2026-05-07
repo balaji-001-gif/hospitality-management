@@ -1,0 +1,128 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "property",
+    "year",
+    "month",
+    "section_break_1",
+    "rooms_budget",
+    "fnb_budget",
+    "spa_budget",
+    "events_budget",
+    "other_budget",
+    "column_break_1",
+    "total_budget",
+    "actual_revenue",
+    "variance",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "RB-.YYYY.-"
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "year",
+      "fieldtype": "Int",
+      "label": "Year",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "month",
+      "fieldtype": "Select",
+      "label": "Month",
+      "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_break_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "rooms_budget",
+      "fieldtype": "Currency",
+      "label": "Rooms Revenue Budget"
+    },
+    {
+      "fieldname": "fnb_budget",
+      "fieldtype": "Currency",
+      "label": "F&B Revenue Budget"
+    },
+    {
+      "fieldname": "spa_budget",
+      "fieldtype": "Currency",
+      "label": "Spa Revenue Budget"
+    },
+    {
+      "fieldname": "events_budget",
+      "fieldtype": "Currency",
+      "label": "Events Revenue Budget"
+    },
+    {
+      "fieldname": "other_budget",
+      "fieldtype": "Currency",
+      "label": "Other Revenue"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "total_budget",
+      "fieldtype": "Currency",
+      "label": "Total Budget",
+      "read_only": 1
+    },
+    {
+      "fieldname": "actual_revenue",
+      "fieldtype": "Currency",
+      "label": "Actual Revenue"
+    },
+    {
+      "fieldname": "variance",
+      "fieldtype": "Currency",
+      "label": "Variance",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Revenue Management",
+  "name": "Revenue Budget",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    }
+  ],
+  "title_field": "property"
+}

@@ -1,0 +1,129 @@
+{
+  "actions": [],
+  "autoname": "field:room_number",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "room_number",
+    "property",
+    "room_type",
+    "status",
+    "section_break_1",
+    "floor",
+    "wing",
+    "room_category",
+    "column_break_1",
+    "current_guest",
+    "current_reservation",
+    "section_break_2",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "room_number",
+      "fieldtype": "Data",
+      "label": "Room Number",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "room_type",
+      "fieldtype": "Link",
+      "label": "Room Type",
+      "options": "Room Type",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nVacant Clean\nVacant Dirty\nOccupied\nOut of Order\nUnder Maintenance",
+      "default": "Vacant Clean",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_break_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "floor",
+      "fieldtype": "Data",
+      "label": "Floor"
+    },
+    {
+      "fieldname": "wing",
+      "fieldtype": "Data",
+      "label": "Wing / Block"
+    },
+    {
+      "fieldname": "room_category",
+      "fieldtype": "Link",
+      "label": "Room Category",
+      "options": "Room Category"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "current_guest",
+      "fieldtype": "Link",
+      "label": "Current Guest",
+      "options": "Guest Profile",
+      "read_only": 1
+    },
+    {
+      "fieldname": "current_reservation",
+      "fieldtype": "Link",
+      "label": "Current Reservation",
+      "options": "Reservation",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_2",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Property Management",
+  "name": "Room",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "report": 1,
+      "role": "All",
+      "write": 1
+    }
+  ],
+  "title_field": "room_number",
+  "track_changes": 1
+}

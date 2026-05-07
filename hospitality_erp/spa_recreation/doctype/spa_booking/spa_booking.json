@@ -1,0 +1,114 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "guest",
+    "spa_service",
+    "therapist",
+    "property",
+    "section_break_1",
+    "booking_date",
+    "booking_time",
+    "status",
+    "amount",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "SPAB-.YYYY.-"
+    },
+    {
+      "fieldname": "guest",
+      "fieldtype": "Link",
+      "label": "Guest",
+      "options": "Guest Profile",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "spa_service",
+      "fieldtype": "Link",
+      "label": "Spa Service",
+      "options": "Spa Service",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "therapist",
+      "fieldtype": "Link",
+      "label": "Therapist",
+      "options": "Therapist"
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property"
+    },
+    {
+      "fieldname": "section_break_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "booking_date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "booking_time",
+      "fieldtype": "Time",
+      "label": "Time"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nBooked\nChecked In\nCompleted\nCancelled\nNo Show",
+      "default": "Booked",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "label": "Amount"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Spa Recreation",
+  "name": "Spa Booking",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "All",
+      "write": 1
+    }
+  ],
+  "title_field": "guest"
+}

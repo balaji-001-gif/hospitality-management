@@ -1,0 +1,87 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "fnb_order",
+    "outlet",
+    "table",
+    "status",
+    "printed_at",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "KOT-.YYYY.-"
+    },
+    {
+      "fieldname": "fnb_order",
+      "fieldtype": "Link",
+      "label": "F&B Order",
+      "options": "FnB Order",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "outlet",
+      "fieldtype": "Link",
+      "label": "Outlet",
+      "options": "Outlet",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "table",
+      "fieldtype": "Link",
+      "label": "Table",
+      "options": "Restaurant Table"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nNew\nIn Kitchen\nReady\nServed",
+      "default": "New",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "printed_at",
+      "fieldtype": "Datetime",
+      "label": "Printed At"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "FnB",
+  "name": "Kitchen Order Ticket",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "All",
+      "write": 1
+    }
+  ],
+  "title_field": "fnb_order"
+}

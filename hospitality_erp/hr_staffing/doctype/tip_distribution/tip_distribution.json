@@ -1,0 +1,85 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "property",
+    "distribution_date",
+    "department",
+    "total_tips",
+    "staff_count",
+    "per_staff_amount",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "TIP-.YYYY.-"
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "distribution_date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "default": "Today",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "department",
+      "fieldtype": "Select",
+      "label": "Department",
+      "options": "\nF&B\nHousekeeping\nSpa\nFront Desk\nAll"
+    },
+    {
+      "fieldname": "total_tips",
+      "fieldtype": "Currency",
+      "label": "Total Tips",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "staff_count",
+      "fieldtype": "Int",
+      "label": "Staff Count"
+    },
+    {
+      "fieldname": "per_staff_amount",
+      "fieldtype": "Currency",
+      "label": "Per Staff Amount",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "HR Staffing",
+  "name": "Tip Distribution",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "role": "System Manager",
+      "write": 1
+    }
+  ],
+  "title_field": "property"
+}

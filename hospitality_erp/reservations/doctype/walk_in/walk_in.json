@@ -1,0 +1,134 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "guest_name",
+    "phone",
+    "property",
+    "room",
+    "section_break_1",
+    "check_in_datetime",
+    "expected_checkout",
+    "adults",
+    "column_break_1",
+    "rate_per_night",
+    "total_nights",
+    "total_amount",
+    "advance_paid",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "WI-.YYYY.-"
+    },
+    {
+      "fieldname": "guest_name",
+      "fieldtype": "Data",
+      "label": "Guest Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1
+    },
+    {
+      "fieldname": "room",
+      "fieldtype": "Link",
+      "label": "Room",
+      "options": "Room",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_break_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "check_in_datetime",
+      "fieldtype": "Datetime",
+      "label": "Check-In",
+      "default": "Now"
+    },
+    {
+      "fieldname": "expected_checkout",
+      "fieldtype": "Date",
+      "label": "Expected Check-Out"
+    },
+    {
+      "fieldname": "adults",
+      "fieldtype": "Int",
+      "label": "Adults",
+      "default": "1"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "rate_per_night",
+      "fieldtype": "Currency",
+      "label": "Rate Per Night"
+    },
+    {
+      "fieldname": "total_nights",
+      "fieldtype": "Int",
+      "label": "Total Nights"
+    },
+    {
+      "fieldname": "total_amount",
+      "fieldtype": "Currency",
+      "label": "Total Amount",
+      "read_only": 1
+    },
+    {
+      "fieldname": "advance_paid",
+      "fieldtype": "Currency",
+      "label": "Advance Paid"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Reservations",
+  "name": "Walk In",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "All",
+      "write": 1
+    }
+  ],
+  "title_field": "guest_name"
+}

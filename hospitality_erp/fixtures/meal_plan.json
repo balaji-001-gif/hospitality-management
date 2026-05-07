@@ -1,0 +1,6 @@
+[
+  {"doctype": "Meal Plan", "name": "EP - No Meals", "plan_name": "EP - No Meals", "plan_code": "EP", "is_active": 1},
+  {"doctype": "Meal Plan", "name": "CP - Breakfast Only", "plan_name": "CP - Breakfast Only", "plan_code": "CP", "is_active": 1},
+  {"doctype": "Meal Plan", "name": "MAP - Breakfast & Dinner", "plan_name": "MAP - Breakfast & Dinner", "plan_code": "MAP", "is_active": 1},
+  {"doctype": "Meal Plan", "name": "AP - All Meals", "plan_name": "AP - All Meals", "plan_code": "AP", "is_active": 1}
+]

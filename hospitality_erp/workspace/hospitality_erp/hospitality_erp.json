@@ -1,0 +1,296 @@
+{
+  "category": "Modules",
+  "charts": [],
+  "content": "[{\"id\":\"hd-prop\",\"type\":\"header\",\"data\":{\"text\":\"<b>Property Management</b>\",\"col\":12}},{\"id\":\"sc-property\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Property\",\"col\":3}},{\"id\":\"sc-room\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Room\",\"col\":3}},{\"id\":\"sc-room-type\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Room Type\",\"col\":3}},{\"id\":\"sc-floor-plan\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Floor Plan\",\"col\":3}},{\"id\":\"hd-res\",\"type\":\"header\",\"data\":{\"text\":\"<b>Reservations</b>\",\"col\":12}},{\"id\":\"sc-reservation\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Reservation\",\"col\":3}},{\"id\":\"sc-checkin\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Check In\",\"col\":3}},{\"id\":\"sc-checkout\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Check Out\",\"col\":3}},{\"id\":\"sc-folio\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Guest Folio\",\"col\":3}},{\"id\":\"hd-guest\",\"type\":\"header\",\"data\":{\"text\":\"<b>Guest CRM</b>\",\"col\":12}},{\"id\":\"sc-guest\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Guest Profile\",\"col\":3}},{\"id\":\"sc-loyalty\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Loyalty Program\",\"col\":3}},{\"id\":\"sc-feedback\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Guest Feedback\",\"col\":3}},{\"id\":\"hd-rev\",\"type\":\"header\",\"data\":{\"text\":\"<b>Revenue Management</b>\",\"col\":12}},{\"id\":\"sc-rateplan\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rate Plan\",\"col\":3}},{\"id\":\"sc-seasonal\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Seasonal Pricing\",\"col\":3}},{\"id\":\"sc-revbudget\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Revenue Budget\",\"col\":3}},{\"id\":\"hd-fnb\",\"type\":\"header\",\"data\":{\"text\":\"<b>Food and Beverage</b>\",\"col\":12}},{\"id\":\"sc-fnborder\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"FnB Order\",\"col\":3}},{\"id\":\"sc-menuitem\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Menu Item\",\"col\":3}},{\"id\":\"sc-outlet\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Outlet\",\"col\":3}},{\"id\":\"hd-events\",\"type\":\"header\",\"data\":{\"text\":\"<b>Events and Banqueting</b>\",\"col\":12}},{\"id\":\"sc-eventbooking\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Event Booking\",\"col\":3}},{\"id\":\"sc-banhall\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Banquet Hall\",\"col\":3}},{\"id\":\"hd-spa\",\"type\":\"header\",\"data\":{\"text\":\"<b>Spa and Recreation</b>\",\"col\":12}},{\"id\":\"sc-spabooking\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Spa Booking\",\"col\":3}},{\"id\":\"sc-spaservice\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Spa Service\",\"col\":3}},{\"id\":\"hd-hk\",\"type\":\"header\",\"data\":{\"text\":\"<b>Housekeeping</b>\",\"col\":12}},{\"id\":\"sc-hktask\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Housekeeping Task\",\"col\":3}},{\"id\":\"sc-laundry\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Laundry Order\",\"col\":3}},{\"id\":\"sc-lostandfound\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lost and Found\",\"col\":3}},{\"id\":\"hd-maint\",\"type\":\"header\",\"data\":{\"text\":\"<b>Maintenance</b>\",\"col\":12}},{\"id\":\"sc-maintreq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Request\",\"col\":3}},{\"id\":\"sc-workorder\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work Order\",\"col\":3}},{\"id\":\"hd-finance\",\"type\":\"header\",\"data\":{\"text\":\"<b>Finance and Billing</b>\",\"col\":12}},{\"id\":\"sc-guestinv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Guest Invoice\",\"col\":3}},{\"id\":\"sc-nightaudit\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Night Audit\",\"col\":3}},{\"id\":\"sc-payment\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Receipt\",\"col\":3}},{\"id\":\"sc-deposit\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Advance Deposit\",\"col\":3}}]",
+  "creation": "2024-01-01 00:00:00.000000",
+  "developer_mode_only": 0,
+  "disable_user_customization": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "uil uil-building",
+  "is_hidden": 0,
+  "label": "Hospitality Management",
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Reservations",
+  "name": "Hospitality Management",
+  "owner": "Administrator",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 100.0,
+  "shortcuts": [
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "icon": "uil uil-building",
+      "label": "Property",
+      "link_to": "Property",
+      "name": "Property",
+      "type": "DocType"
+    },
+    {
+      "color": "Green",
+      "doc_view": "List",
+      "icon": "uil uil-bed",
+      "label": "Room",
+      "link_to": "Room",
+      "name": "Room",
+      "type": "DocType"
+    },
+    {
+      "color": "Cyan",
+      "doc_view": "List",
+      "icon": "uil uil-layers",
+      "label": "Room Type",
+      "link_to": "Room Type",
+      "name": "Room Type",
+      "type": "DocType"
+    },
+    {
+      "color": "Purple",
+      "doc_view": "List",
+      "icon": "uil uil-map",
+      "label": "Floor Plan",
+      "link_to": "Floor Plan",
+      "name": "Floor Plan",
+      "type": "DocType"
+    },
+    {
+      "color": "Red",
+      "doc_view": "List",
+      "icon": "uil uil-calendar-alt",
+      "label": "Reservation",
+      "link_to": "Reservation",
+      "name": "Reservation",
+      "type": "DocType"
+    },
+    {
+      "color": "Green",
+      "doc_view": "List",
+      "icon": "uil uil-sign-in-alt",
+      "label": "Check In",
+      "link_to": "Check In",
+      "name": "Check In",
+      "type": "DocType"
+    },
+    {
+      "color": "Orange",
+      "doc_view": "List",
+      "icon": "uil uil-sign-out-alt",
+      "label": "Check Out",
+      "link_to": "Check Out",
+      "name": "Check Out",
+      "type": "DocType"
+    },
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "icon": "uil uil-receipt",
+      "label": "Guest Folio",
+      "link_to": "Guest Folio",
+      "name": "Guest Folio",
+      "type": "DocType"
+    },
+    {
+      "color": "Purple",
+      "doc_view": "List",
+      "icon": "uil uil-user",
+      "label": "Guest Profile",
+      "link_to": "Guest Profile",
+      "name": "Guest Profile",
+      "type": "DocType"
+    },
+    {
+      "color": "Yellow",
+      "doc_view": "List",
+      "icon": "uil uil-star",
+      "label": "Loyalty Program",
+      "link_to": "Loyalty Program",
+      "name": "Loyalty Program",
+      "type": "DocType"
+    },
+    {
+      "color": "Cyan",
+      "doc_view": "List",
+      "icon": "uil uil-comment-alt",
+      "label": "Guest Feedback",
+      "link_to": "Guest Feedback",
+      "name": "Guest Feedback",
+      "type": "DocType"
+    },
+    {
+      "color": "Green",
+      "doc_view": "List",
+      "icon": "uil uil-moneybag",
+      "label": "Rate Plan",
+      "link_to": "Rate Plan",
+      "name": "Rate Plan",
+      "type": "DocType"
+    },
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "icon": "uil uil-calendar-alt",
+      "label": "Seasonal Pricing",
+      "link_to": "Seasonal Pricing",
+      "name": "Seasonal Pricing",
+      "type": "DocType"
+    },
+    {
+      "color": "Orange",
+      "doc_view": "List",
+      "icon": "uil uil-graph-bar",
+      "label": "Revenue Budget",
+      "link_to": "Revenue Budget",
+      "name": "Revenue Budget",
+      "type": "DocType"
+    },
+    {
+      "color": "Red",
+      "doc_view": "List",
+      "icon": "uil uil-utensils",
+      "label": "FnB Order",
+      "link_to": "FnB Order",
+      "name": "FnB Order",
+      "type": "DocType"
+    },
+    {
+      "color": "Green",
+      "doc_view": "List",
+      "icon": "uil uil-list-ul",
+      "label": "Menu Item",
+      "link_to": "Menu Item",
+      "name": "Menu Item",
+      "type": "DocType"
+    },
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "icon": "uil uil-store",
+      "label": "Outlet",
+      "link_to": "Outlet",
+      "name": "Outlet",
+      "type": "DocType"
+    },
+    {
+      "color": "Purple",
+      "doc_view": "List",
+      "icon": "uil uil-glass-martini",
+      "label": "Event Booking",
+      "link_to": "Event Booking",
+      "name": "Event Booking",
+      "type": "DocType"
+    },
+    {
+      "color": "Cyan",
+      "doc_view": "List",
+      "icon": "uil uil-meeting-board",
+      "label": "Banquet Hall",
+      "link_to": "Banquet Hall",
+      "name": "Banquet Hall",
+      "type": "DocType"
+    },
+    {
+      "color": "Pink",
+      "doc_view": "List",
+      "icon": "uil uil-heart",
+      "label": "Spa Booking",
+      "link_to": "Spa Booking",
+      "name": "Spa Booking",
+      "type": "DocType"
+    },
+    {
+      "color": "Gray",
+      "doc_view": "List",
+      "icon": "uil uil-spa",
+      "label": "Spa Service",
+      "link_to": "Spa Service",
+      "name": "Spa Service",
+      "type": "DocType"
+    },
+    {
+      "color": "Orange",
+      "doc_view": "List",
+      "icon": "uil uil-broom",
+      "label": "Housekeeping Task",
+      "link_to": "Housekeeping Task",
+      "name": "Housekeeping Task",
+      "type": "DocType"
+    },
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "icon": "uil uil-tshirt",
+      "label": "Laundry Order",
+      "link_to": "Laundry Order",
+      "name": "Laundry Order",
+      "type": "DocType"
+    },
+    {
+      "color": "Gray",
+      "doc_view": "List",
+      "icon": "uil uil-search",
+      "label": "Lost and Found",
+      "link_to": "Lost and Found",
+      "name": "Lost and Found",
+      "type": "DocType"
+    },
+    {
+      "color": "Red",
+      "doc_view": "List",
+      "icon": "uil uil-wrench",
+      "label": "Maintenance Request",
+      "link_to": "Maintenance Request",
+      "name": "Maintenance Request",
+      "type": "DocType"
+    },
+    {
+      "color": "Orange",
+      "doc_view": "List",
+      "icon": "uil uil-hard-hat",
+      "label": "Work Order",
+      "link_to": "Work Order",
+      "name": "Work Order",
+      "type": "DocType"
+    },
+    {
+      "color": "Green",
+      "doc_view": "List",
+      "icon": "uil uil-invoice",
+      "label": "Guest Invoice",
+      "link_to": "Guest Invoice",
+      "name": "Guest Invoice",
+      "type": "DocType"
+    },
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "icon": "uil uil-moon",
+      "label": "Night Audit",
+      "link_to": "Night Audit",
+      "name": "Night Audit",
+      "type": "DocType"
+    },
+    {
+      "color": "Cyan",
+      "doc_view": "List",
+      "icon": "uil uil-credit-card",
+      "label": "Payment Receipt",
+      "link_to": "Payment Receipt",
+      "name": "Payment Receipt",
+      "type": "DocType"
+    },
+    {
+      "color": "Purple",
+      "doc_view": "List",
+      "icon": "uil uil-wallet",
+      "label": "Advance Deposit",
+      "link_to": "Advance Deposit",
+      "name": "Advance Deposit",
+      "type": "DocType"
+    }
+  ],
+  "title": "Hospitality Management"
+}

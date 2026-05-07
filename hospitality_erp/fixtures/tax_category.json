@@ -1,0 +1,7 @@
+[
+  {"doctype": "Tax Category", "name": "GST 12%", "category_name": "GST 12%", "tax_rate": 12, "is_active": 1},
+  {"doctype": "Tax Category", "name": "GST 18%", "category_name": "GST 18%", "tax_rate": 18, "is_active": 1},
+  {"doctype": "Tax Category", "name": "Luxury Tax", "category_name": "Luxury Tax", "tax_rate": 10, "is_active": 1},
+  {"doctype": "Tax Category", "name": "Service Charge", "category_name": "Service Charge", "tax_rate": 10, "is_active": 1},
+  {"doctype": "Tax Category", "name": "GST Exempt", "category_name": "GST Exempt", "tax_rate": 0, "is_active": 1}
+]

@@ -1,0 +1,7 @@
+[
+  {"doctype": "Amenity Type", "name": "In-Room", "type_name": "In-Room", "is_active": 1},
+  {"doctype": "Amenity Type", "name": "Property", "type_name": "Property", "is_active": 1},
+  {"doctype": "Amenity Type", "name": "F&B", "type_name": "F&B", "is_active": 1},
+  {"doctype": "Amenity Type", "name": "Recreation", "type_name": "Recreation", "is_active": 1},
+  {"doctype": "Amenity Type", "name": "Business", "type_name": "Business", "is_active": 1}
+]

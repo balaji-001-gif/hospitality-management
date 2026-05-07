@@ -1,0 +1,63 @@
+{
+  "actions": [],
+  "autoname": "field:channel_name",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "channel_name",
+    "channel_type",
+    "commission_pct",
+    "is_active"
+  ],
+  "fields": [
+    {
+      "fieldname": "channel_name",
+      "fieldtype": "Data",
+      "label": "Channel Name",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "channel_type",
+      "fieldtype": "Select",
+      "label": "Channel Type",
+      "options": "\nDirect\nOTA\nCorporate\nTravel Agent\nWalk-in",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "commission_pct",
+      "fieldtype": "Percent",
+      "label": "Commission %"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Hotel Masters",
+  "name": "Channel",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "All"
+    }
+  ],
+  "title_field": "channel_name"
+}
