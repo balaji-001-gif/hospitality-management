@@ -19,278 +19,92 @@
   "public": 1,
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 100.0,
+  "sequence_id": 100,
   "shortcuts": [
-    {
-      "color": "Blue",
-      "doc_view": "List",
-      "icon": "uil uil-building",
-      "label": "Property",
-      "link_to": "Property",
-      "name": "Property",
-      "type": "DocType"
-    },
-    {
-      "color": "Green",
-      "doc_view": "List",
-      "icon": "uil uil-bed",
-      "label": "Room",
-      "link_to": "Room",
-      "name": "Room",
-      "type": "DocType"
-    },
-    {
-      "color": "Cyan",
-      "doc_view": "List",
-      "icon": "uil uil-layers",
-      "label": "Room Type",
-      "link_to": "Room Type",
-      "name": "Room Type",
-      "type": "DocType"
-    },
-    {
-      "color": "Purple",
-      "doc_view": "List",
-      "icon": "uil uil-map",
-      "label": "Floor Plan",
-      "link_to": "Floor Plan",
-      "name": "Floor Plan",
-      "type": "DocType"
-    },
-    {
-      "color": "Red",
-      "doc_view": "List",
-      "icon": "uil uil-calendar-alt",
-      "label": "Reservation",
-      "link_to": "Reservation",
-      "name": "Reservation",
-      "type": "DocType"
-    },
-    {
-      "color": "Green",
-      "doc_view": "List",
-      "icon": "uil uil-sign-in-alt",
-      "label": "Check In",
-      "link_to": "Check In",
-      "name": "Check In",
-      "type": "DocType"
-    },
-    {
-      "color": "Orange",
-      "doc_view": "List",
-      "icon": "uil uil-sign-out-alt",
-      "label": "Check Out",
-      "link_to": "Check Out",
-      "name": "Check Out",
-      "type": "DocType"
-    },
-    {
-      "color": "Blue",
-      "doc_view": "List",
-      "icon": "uil uil-receipt",
-      "label": "Guest Folio",
-      "link_to": "Guest Folio",
-      "name": "Guest Folio",
-      "type": "DocType"
-    },
-    {
-      "color": "Purple",
-      "doc_view": "List",
-      "icon": "uil uil-user",
-      "label": "Guest Profile",
-      "link_to": "Guest Profile",
-      "name": "Guest Profile",
-      "type": "DocType"
-    },
-    {
-      "color": "Yellow",
-      "doc_view": "List",
-      "icon": "uil uil-star",
-      "label": "Loyalty Program",
-      "link_to": "Loyalty Program",
-      "name": "Loyalty Program",
-      "type": "DocType"
-    },
-    {
-      "color": "Cyan",
-      "doc_view": "List",
-      "icon": "uil uil-comment-alt",
-      "label": "Guest Feedback",
-      "link_to": "Guest Feedback",
-      "name": "Guest Feedback",
-      "type": "DocType"
-    },
-    {
-      "color": "Green",
-      "doc_view": "List",
-      "icon": "uil uil-moneybag",
-      "label": "Rate Plan",
-      "link_to": "Rate Plan",
-      "name": "Rate Plan",
-      "type": "DocType"
-    },
-    {
-      "color": "Blue",
-      "doc_view": "List",
-      "icon": "uil uil-calendar-alt",
-      "label": "Seasonal Pricing",
-      "link_to": "Seasonal Pricing",
-      "name": "Seasonal Pricing",
-      "type": "DocType"
-    },
-    {
-      "color": "Orange",
-      "doc_view": "List",
-      "icon": "uil uil-graph-bar",
-      "label": "Revenue Budget",
-      "link_to": "Revenue Budget",
-      "name": "Revenue Budget",
-      "type": "DocType"
-    },
-    {
-      "color": "Red",
-      "doc_view": "List",
-      "icon": "uil uil-utensils",
-      "label": "FnB Order",
-      "link_to": "FnB Order",
-      "name": "FnB Order",
-      "type": "DocType"
-    },
-    {
-      "color": "Green",
-      "doc_view": "List",
-      "icon": "uil uil-list-ul",
-      "label": "Menu Item",
-      "link_to": "Menu Item",
-      "name": "Menu Item",
-      "type": "DocType"
-    },
-    {
-      "color": "Blue",
-      "doc_view": "List",
-      "icon": "uil uil-store",
-      "label": "Outlet",
-      "link_to": "Outlet",
-      "name": "Outlet",
-      "type": "DocType"
-    },
-    {
-      "color": "Purple",
-      "doc_view": "List",
-      "icon": "uil uil-glass-martini",
-      "label": "Event Booking",
-      "link_to": "Event Booking",
-      "name": "Event Booking",
-      "type": "DocType"
-    },
-    {
-      "color": "Cyan",
-      "doc_view": "List",
-      "icon": "uil uil-meeting-board",
-      "label": "Banquet Hall",
-      "link_to": "Banquet Hall",
-      "name": "Banquet Hall",
-      "type": "DocType"
-    },
-    {
-      "color": "Pink",
-      "doc_view": "List",
-      "icon": "uil uil-heart",
-      "label": "Spa Booking",
-      "link_to": "Spa Booking",
-      "name": "Spa Booking",
-      "type": "DocType"
-    },
-    {
-      "color": "Gray",
-      "doc_view": "List",
-      "icon": "uil uil-spa",
-      "label": "Spa Service",
-      "link_to": "Spa Service",
-      "name": "Spa Service",
-      "type": "DocType"
-    },
-    {
-      "color": "Orange",
-      "doc_view": "List",
-      "icon": "uil uil-broom",
-      "label": "Housekeeping Task",
-      "link_to": "Housekeeping Task",
-      "name": "Housekeeping Task",
-      "type": "DocType"
-    },
-    {
-      "color": "Blue",
-      "doc_view": "List",
-      "icon": "uil uil-tshirt",
-      "label": "Laundry Order",
-      "link_to": "Laundry Order",
-      "name": "Laundry Order",
-      "type": "DocType"
-    },
-    {
-      "color": "Gray",
-      "doc_view": "List",
-      "icon": "uil uil-search",
-      "label": "Lost and Found",
-      "link_to": "Lost and Found",
-      "name": "Lost and Found",
-      "type": "DocType"
-    },
-    {
-      "color": "Red",
-      "doc_view": "List",
-      "icon": "uil uil-wrench",
-      "label": "Maintenance Request",
-      "link_to": "Maintenance Request",
-      "name": "Maintenance Request",
-      "type": "DocType"
-    },
-    {
-      "color": "Orange",
-      "doc_view": "List",
-      "icon": "uil uil-hard-hat",
-      "label": "Work Order",
-      "link_to": "Work Order",
-      "name": "Work Order",
-      "type": "DocType"
-    },
-    {
-      "color": "Green",
-      "doc_view": "List",
-      "icon": "uil uil-invoice",
-      "label": "Guest Invoice",
-      "link_to": "Guest Invoice",
-      "name": "Guest Invoice",
-      "type": "DocType"
-    },
-    {
-      "color": "Blue",
-      "doc_view": "List",
-      "icon": "uil uil-moon",
-      "label": "Night Audit",
-      "link_to": "Night Audit",
-      "name": "Night Audit",
-      "type": "DocType"
-    },
-    {
-      "color": "Cyan",
-      "doc_view": "List",
-      "icon": "uil uil-credit-card",
-      "label": "Payment Receipt",
-      "link_to": "Payment Receipt",
-      "name": "Payment Receipt",
-      "type": "DocType"
-    },
-    {
-      "color": "Purple",
-      "doc_view": "List",
-      "icon": "uil uil-wallet",
-      "label": "Advance Deposit",
-      "link_to": "Advance Deposit",
-      "name": "Advance Deposit",
-      "type": "DocType"
-    }
+    { "color": "Blue",   "doc_view": "List", "icon": "uil uil-building",      "label": "Property",            "link_to": "Property",            "name": "Property",            "type": "DocType" },
+    { "color": "Green",  "doc_view": "List", "icon": "uil uil-bed",            "label": "Room",                "link_to": "Room",                "name": "Room",                "type": "DocType" },
+    { "color": "Cyan",   "doc_view": "List", "icon": "uil uil-layers",         "label": "Room Type",           "link_to": "Room Type",           "name": "Room Type",           "type": "DocType" },
+    { "color": "Purple", "doc_view": "List", "icon": "uil uil-map",            "label": "Floor Plan",          "link_to": "Floor Plan",          "name": "Floor Plan",          "type": "DocType" },
+    { "color": "Red",    "doc_view": "List", "icon": "uil uil-calendar-alt",   "label": "Reservation",         "link_to": "Reservation",         "name": "Reservation",         "type": "DocType" },
+    { "color": "Green",  "doc_view": "List", "icon": "uil uil-sign-in-alt",    "label": "Check In",            "link_to": "Check In",            "name": "Check In",            "type": "DocType" },
+    { "color": "Orange", "doc_view": "List", "icon": "uil uil-sign-out-alt",   "label": "Check Out",           "link_to": "Check Out",           "name": "Check Out",           "type": "DocType" },
+    { "color": "Blue",   "doc_view": "List", "icon": "uil uil-receipt",        "label": "Guest Folio",         "link_to": "Guest Folio",         "name": "Guest Folio",         "type": "DocType" },
+    { "color": "Purple", "doc_view": "List", "icon": "uil uil-user",           "label": "Guest Profile",       "link_to": "Guest Profile",       "name": "Guest Profile",       "type": "DocType" },
+    { "color": "Yellow", "doc_view": "List", "icon": "uil uil-star",           "label": "Loyalty Program",     "link_to": "Loyalty Program",     "name": "Loyalty Program",     "type": "DocType" },
+    { "color": "Cyan",   "doc_view": "List", "icon": "uil uil-comment-alt",    "label": "Guest Feedback",      "link_to": "Guest Feedback",      "name": "Guest Feedback",      "type": "DocType" },
+    { "color": "Green",  "doc_view": "List", "icon": "uil uil-moneybag",       "label": "Rate Plan",           "link_to": "Rate Plan",           "name": "Rate Plan",           "type": "DocType" },
+    { "color": "Blue",   "doc_view": "List", "icon": "uil uil-calendar-alt",   "label": "Seasonal Pricing",    "link_to": "Seasonal Pricing",    "name": "Seasonal Pricing",    "type": "DocType" },
+    { "color": "Orange", "doc_view": "List", "icon": "uil uil-graph-bar",      "label": "Revenue Budget",      "link_to": "Revenue Budget",      "name": "Revenue Budget",      "type": "DocType" },
+    { "color": "Red",    "doc_view": "List", "icon": "uil uil-utensils",       "label": "FnB Order",           "link_to": "FnB Order",           "name": "FnB Order",           "type": "DocType" },
+    { "color": "Green",  "doc_view": "List", "icon": "uil uil-list-ul",        "label": "Menu Item",           "link_to": "Menu Item",           "name": "Menu Item",           "type": "DocType" },
+    { "color": "Blue",   "doc_view": "List", "icon": "uil uil-store",          "label": "Outlet",              "link_to": "Outlet",              "name": "Outlet",              "type": "DocType" },
+    { "color": "Purple", "doc_view": "List", "icon": "uil uil-glass-martini",  "label": "Event Booking",       "link_to": "Event Booking",       "name": "Event Booking",       "type": "DocType" },
+    { "color": "Cyan",   "doc_view": "List", "icon": "uil uil-meeting-board",  "label": "Banquet Hall",        "link_to": "Banquet Hall",        "name": "Banquet Hall",        "type": "DocType" },
+    { "color": "Pink",   "doc_view": "List", "icon": "uil uil-heart",          "label": "Spa Booking",         "link_to": "Spa Booking",         "name": "Spa Booking",         "type": "DocType" },
+    { "color": "Gray",   "doc_view": "List", "icon": "uil uil-spa",            "label": "Spa Service",         "link_to": "Spa Service",         "name": "Spa Service",         "type": "DocType" },
+    { "color": "Orange", "doc_view": "List", "icon": "uil uil-broom",          "label": "Housekeeping Task",   "link_to": "Housekeeping Task",   "name": "Housekeeping Task",   "type": "DocType" },
+    { "color": "Blue",   "doc_view": "List", "icon": "uil uil-tshirt",         "label": "Laundry Order",       "link_to": "Laundry Order",       "name": "Laundry Order",       "type": "DocType" },
+    { "color": "Gray",   "doc_view": "List", "icon": "uil uil-search",         "label": "Lost and Found",      "link_to": "Lost and Found",      "name": "Lost and Found",      "type": "DocType" },
+    { "color": "Red",    "doc_view": "List", "icon": "uil uil-wrench",         "label": "Maintenance Request", "link_to": "Maintenance Request", "name": "Maintenance Request", "type": "DocType" },
+    { "color": "Orange", "doc_view": "List", "icon": "uil uil-hard-hat",       "label": "Work Order",          "link_to": "Work Order",          "name": "Work Order",          "type": "DocType" },
+    { "color": "Green",  "doc_view": "List", "icon": "uil uil-invoice",        "label": "Guest Invoice",       "link_to": "Guest Invoice",       "name": "Guest Invoice",       "type": "DocType" },
+    { "color": "Blue",   "doc_view": "List", "icon": "uil uil-moon",           "label": "Night Audit",         "link_to": "Night Audit",         "name": "Night Audit",         "type": "DocType" },
+    { "color": "Cyan",   "doc_view": "List", "icon": "uil uil-credit-card",    "label": "Payment Receipt",     "link_to": "Payment Receipt",     "name": "Payment Receipt",     "type": "DocType" },
+    { "color": "Purple", "doc_view": "List", "icon": "uil uil-wallet",         "label": "Advance Deposit",     "link_to": "Advance Deposit",     "name": "Advance Deposit",     "type": "DocType" }
   ],
-  "title": "Hospitality Management"
+  "title": "Hospitality Management",
+
+  "links": [
+
+    { "hidden": 0, "idx": 1,  "is_query_report": 0, "type": "Card Break", "label": "Property Management", "title": "Property Management", "link_count": 0, "onboard": 1 },
+    { "hidden": 0, "idx": 2,  "is_query_report": 0, "type": "Link", "label": "Property",            "link_type": "DocType", "link_to": "Property",            "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 3,  "is_query_report": 0, "type": "Link", "label": "Room",                "link_type": "DocType", "link_to": "Room",                "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 4,  "is_query_report": 0, "type": "Link", "label": "Room Type",           "link_type": "DocType", "link_to": "Room Type",           "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 5,  "is_query_report": 0, "type": "Link", "label": "Floor Plan",          "link_type": "DocType", "link_to": "Floor Plan",          "link_count": 0, "onboard": 0, "dependencies": "" },
+
+    { "hidden": 0, "idx": 6,  "is_query_report": 0, "type": "Card Break", "label": "Reservations",        "title": "Reservations",        "link_count": 0, "onboard": 1 },
+    { "hidden": 0, "idx": 7,  "is_query_report": 0, "type": "Link", "label": "Reservation",         "link_type": "DocType", "link_to": "Reservation",         "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 8,  "is_query_report": 0, "type": "Link", "label": "Check In",            "link_type": "DocType", "link_to": "Check In",            "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 9,  "is_query_report": 0, "type": "Link", "label": "Check Out",           "link_type": "DocType", "link_to": "Check Out",           "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 10, "is_query_report": 0, "type": "Link", "label": "Guest Folio",         "link_type": "DocType", "link_to": "Guest Folio",         "link_count": 0, "onboard": 0, "dependencies": "" },
+
+    { "hidden": 0, "idx": 11, "is_query_report": 0, "type": "Card Break", "label": "Guest CRM",           "title": "Guest CRM",           "link_count": 0, "onboard": 1 },
+    { "hidden": 0, "idx": 12, "is_query_report": 0, "type": "Link", "label": "Guest Profile",       "link_type": "DocType", "link_to": "Guest Profile",       "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 13, "is_query_report": 0, "type": "Link", "label": "Loyalty Program",     "link_type": "DocType", "link_to": "Loyalty Program",     "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 14, "is_query_report": 0, "type": "Link", "label": "Guest Feedback",      "link_type": "DocType", "link_to": "Guest Feedback",      "link_count": 0, "onboard": 0, "dependencies": "" },
+
+    { "hidden": 0, "idx": 15, "is_query_report": 0, "type": "Card Break", "label": "Revenue Management",  "title": "Revenue Management",  "link_count": 0, "onboard": 0 },
+    { "hidden": 0, "idx": 16, "is_query_report": 0, "type": "Link", "label": "Rate Plan",           "link_type": "DocType", "link_to": "Rate Plan",           "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 17, "is_query_report": 0, "type": "Link", "label": "Seasonal Pricing",    "link_type": "DocType", "link_to": "Seasonal Pricing",    "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 18, "is_query_report": 0, "type": "Link", "label": "Revenue Budget",      "link_type": "DocType", "link_to": "Revenue Budget",      "link_count": 0, "onboard": 0, "dependencies": "" },
+
+    { "hidden": 0, "idx": 19, "is_query_report": 0, "type": "Card Break", "label": "Food and Beverage",   "title": "Food and Beverage",   "link_count": 0, "onboard": 0 },
+    { "hidden": 0, "idx": 20, "is_query_report": 0, "type": "Link", "label": "FnB Order",           "link_type": "DocType", "link_to": "FnB Order",           "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 21, "is_query_report": 0, "type": "Link", "label": "Menu Item",           "link_type": "DocType", "link_to": "Menu Item",           "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 22, "is_query_report": 0, "type": "Link", "label": "Outlet",              "link_type": "DocType", "link_to": "Outlet",              "link_count": 0, "onboard": 0, "dependencies": "" },
+
+    { "hidden": 0, "idx": 23, "is_query_report": 0, "type": "Card Break", "label": "Events and Banqueting","title": "Events and Banqueting","link_count": 0, "onboard": 0 },
+    { "hidden": 0, "idx": 24, "is_query_report": 0, "type": "Link", "label": "Event Booking",       "link_type": "DocType", "link_to": "Event Booking",       "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 25, "is_query_report": 0, "type": "Link", "label": "Banquet Hall",        "link_type": "DocType", "link_to": "Banquet Hall",        "link_count": 0, "onboard": 0, "dependencies": "" },
+
+    { "hidden": 0, "idx": 26, "is_query_report": 0, "type": "Card Break", "label": "Spa and Recreation",  "title": "Spa and Recreation",  "link_count": 0, "onboard": 0 },
+    { "hidden": 0, "idx": 27, "is_query_report": 0, "type": "Link", "label": "Spa Booking",         "link_type": "DocType", "link_to": "Spa Booking",         "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 28, "is_query_report": 0, "type": "Link", "label": "Spa Service",         "link_type": "DocType", "link_to": "Spa Service",         "link_count": 0, "onboard": 0, "dependencies": "" },
+
+    { "hidden": 0, "idx": 29, "is_query_report": 0, "type": "Card Break", "label": "Housekeeping",        "title": "Housekeeping",        "link_count": 0, "onboard": 0 },
+    { "hidden": 0, "idx": 30, "is_query_report": 0, "type": "Link", "label": "Housekeeping Task",   "link_type": "DocType", "link_to": "Housekeeping Task",   "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 31, "is_query_report": 0, "type": "Link", "label": "Laundry Order",       "link_type": "DocType", "link_to": "Laundry Order",       "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 32, "is_query_report": 0, "type": "Link", "label": "Lost and Found",      "link_type": "DocType", "link_to": "Lost and Found",      "link_count": 0, "onboard": 0, "dependencies": "" },
+
+    { "hidden": 0, "idx": 33, "is_query_report": 0, "type": "Card Break", "label": "Maintenance",         "title": "Maintenance",         "link_count": 0, "onboard": 0 },
+    { "hidden": 0, "idx": 34, "is_query_report": 0, "type": "Link", "label": "Maintenance Request", "link_type": "DocType", "link_to": "Maintenance Request", "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 35, "is_query_report": 0, "type": "Link", "label": "Work Order",          "link_type": "DocType", "link_to": "Work Order",          "link_count": 0, "onboard": 0, "dependencies": "" },
+
+    { "hidden": 0, "idx": 36, "is_query_report": 0, "type": "Card Break", "label": "Finance and Billing",  "title": "Finance and Billing",  "link_count": 0, "onboard": 0 },
+    { "hidden": 0, "idx": 37, "is_query_report": 0, "type": "Link", "label": "Guest Invoice",       "link_type": "DocType", "link_to": "Guest Invoice",       "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 38, "is_query_report": 0, "type": "Link", "label": "Night Audit",         "link_type": "DocType", "link_to": "Night Audit",         "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 39, "is_query_report": 0, "type": "Link", "label": "Payment Receipt",     "link_type": "DocType", "link_to": "Payment Receipt",     "link_count": 0, "onboard": 0, "dependencies": "" },
+    { "hidden": 0, "idx": 40, "is_query_report": 0, "type": "Link", "label": "Advance Deposit",     "link_type": "DocType", "link_to": "Advance Deposit",     "link_count": 0, "onboard": 0, "dependencies": "" }
+
+  ]
 }
