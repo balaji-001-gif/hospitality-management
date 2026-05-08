@@ -1,0 +1,22 @@
+{
+  "attach_print": 0,
+  "channel": "System Notification",
+  "condition": "doc.severity in ['High', 'Critical']",
+  "creation": "2024-05-08 00:00:00.000000",
+  "doctype": "Notification",
+  "document_type": "Security Incident",
+  "enabled": 1,
+  "event": "New",
+  "message": "<p>A high severity security incident has been reported at {{ doc.property }}.</p><p><b>Type:</b> {{ doc.incident_type }}</p><p><b>Severity:</b> {{ doc.severity }}</p><p><b>Description:</b> {{ doc.description }}</p>",
+  "modified": "2024-05-08 00:00:00.000000",
+  "modified_by": "Administrator",
+  "name": "High Severity Incident Alert",
+  "owner": "Administrator",
+  "recipients": [
+    {
+      "role": "System Manager"
+    }
+  ],
+  "send_system_notification": 1,
+  "subject": "URGENT: High Severity Incident — {{ doc.incident_type }}"
+}

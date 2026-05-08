@@ -1,0 +1,23 @@
+{
+  "attach_print": 0,
+  "channel": "Email",
+  "condition": "doc.status == 'Confirmed'",
+  "creation": "2024-05-08 00:00:00.000000",
+  "doctype": "Notification",
+  "document_type": "Transport Request",
+  "enabled": 1,
+  "event": "Value Change",
+  "value_changed": "status",
+  "message": "<p>Dear {{ doc.guest }},</p><p>Your transport request for {{ doc.transport_type }} has been confirmed for {{ doc.request_date }} at {{ doc.request_time }}.</p><p>Thank you for choosing our services!</p>",
+  "modified": "2024-05-08 00:00:00.000000",
+  "modified_by": "Administrator",
+  "name": "Transport Request Confirmed",
+  "owner": "Administrator",
+  "recipients": [
+    {
+      "receiver_by_document_field": "guest"
+    }
+  ],
+  "send_system_notification": 1,
+  "subject": "Transport Request Confirmed — {{ doc.transport_type }}"
+}
