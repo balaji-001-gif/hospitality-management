@@ -1,0 +1,17 @@
+{
+  "add_total_row": 1,
+  "creation": "2024-05-08 00:00:00.000000",
+  "disabled": 0,
+  "doctype": "Report",
+  "is_standard": "Yes",
+  "module": "Concierge Services",
+  "name": "Valet Occupancy",
+  "owner": "Administrator",
+  "ref_doctype": "Valet Log",
+  "report_type": "Script Report",
+  "roles": [
+    {
+      "role": "System Manager"
+    }
+  ]
+}

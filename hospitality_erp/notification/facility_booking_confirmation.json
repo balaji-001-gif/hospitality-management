@@ -1,0 +1,22 @@
+{
+  "attach_print": 0,
+  "channel": "Email",
+  "condition": "doc.status == 'Booked'",
+  "creation": "2024-05-08 00:00:00.000000",
+  "doctype": "Notification",
+  "document_type": "Facility Booking",
+  "enabled": 1,
+  "event": "New",
+  "message": "<p>Dear {{ doc.guest }},</p><p>Your booking for {{ doc.facility }} on {{ doc.booking_date }} from {{ doc.start_time }} to {{ doc.end_time }} has been confirmed.</p><p>We look forward to seeing you!</p>",
+  "modified": "2024-05-08 00:00:00.000000",
+  "modified_by": "Administrator",
+  "name": "Facility Booking Confirmation",
+  "owner": "Administrator",
+  "recipients": [
+    {
+      "receiver_by_document_field": "guest"
+    }
+  ],
+  "send_system_notification": 1,
+  "subject": "Facility Booking Confirmation — {{ doc.facility }}"
+}

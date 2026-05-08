@@ -1,0 +1,22 @@
+{
+  "attach_print": 0,
+  "channel": "System Notification",
+  "condition": "doc.energy_usage_kwh > 500 or doc.water_usage_liters > 5000",
+  "creation": "2024-05-08 00:00:00.000000",
+  "doctype": "Notification",
+  "document_type": "Sustainability Log",
+  "enabled": 1,
+  "event": "Save",
+  "message": "<p>High resource usage detected at {{ doc.property }} on {{ doc.log_date }}.</p><p><b>Energy Usage:</b> {{ doc.energy_usage_kwh }} kWh</p><p><b>Water Usage:</b> {{ doc.water_usage_liters }} Liters</p><p>Please investigate for potential leaks or inefficiencies.</p>",
+  "modified": "2024-05-08 00:00:00.000000",
+  "modified_by": "Administrator",
+  "name": "Sustainability Threshold Alert",
+  "owner": "Administrator",
+  "recipients": [
+    {
+      "role": "System Manager"
+    }
+  ],
+  "send_system_notification": 1,
+  "subject": "Sustainability Alert — High Usage at {{ doc.property }}"
+}
