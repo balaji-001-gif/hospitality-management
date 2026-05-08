@@ -1,0 +1,87 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-05-08 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "plan_name",
+    "membership_type",
+    "section_break_1",
+    "amount",
+    "column_break_1",
+    "is_active",
+    "description"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "MEM-PLAN-.YYYY.-"
+    },
+    {
+      "fieldname": "plan_name",
+      "fieldtype": "Data",
+      "label": "Plan Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "membership_type",
+      "fieldtype": "Select",
+      "label": "Membership Type",
+      "options": "Annual\nMonthly\nWeekly\nDaily",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_break_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "label": "Amount",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    }
+  ],
+  "links": [],
+  "modified": "2024-05-08 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Membership Management",
+  "name": "Membership Plan",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "All"
+    }
+  ],
+  "title_field": "plan_name"
+}

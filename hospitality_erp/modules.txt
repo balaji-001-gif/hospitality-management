@@ -10,3 +10,7 @@ Hotel Maintenance
 Finance
 HR Staffing
 Hotel Masters
+Membership Management
+Security Management
+Concierge Services
+Sustainability
