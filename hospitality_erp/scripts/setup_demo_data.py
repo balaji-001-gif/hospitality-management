@@ -74,19 +74,17 @@ def setup_demo_data():
 		guests = []
 		guest_names = ["John Doe", "Jane Smith", "Robert Brown", "Emily White", "Michael Green", "Sarah Blue", "David Black", "Linda Grey", "James Red", "Nancy Gold"]
 		for name in guest_names:
-			fname, lname = name.split()
-			if not frappe.db.exists("Guest Profile", {"first_name": fname, "last_name": lname}):
+			if not frappe.db.exists("Guest Profile", {"full_name": name}):
 				guest = frappe.get_doc({
 					"doctype": "Guest Profile",
 					"naming_series": "GUEST-.YYYY.-",
-					"first_name": fname,
-					"last_name": lname,
+					"full_name": name,
 					"email": f"{name.lower().replace(' ', '.')}@example.com",
 					"status": "Active"
 				}).insert(ignore_permissions=True)
 				guests.append(guest.name)
 			else:
-				guests.append(frappe.db.get_value("Guest Profile", {"first_name": fname, "last_name": lname}))
+				guests.append(frappe.db.get_value("Guest Profile", {"full_name": name}))
 
 		# 5. F&B Outlets & Tables (5 outlets, 5 tables each)
 		outlets = []
