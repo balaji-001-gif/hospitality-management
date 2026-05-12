@@ -6,28 +6,25 @@
   "engine": "InnoDB",
   "field_order": [
     "naming_series",
-    "guest",
+    "asset_name",
     "facility",
     "section_break_1",
-    "booking_date",
-    "start_time",
-    "end_time",
+    "purchase_date",
+    "next_service_date",
     "column_break_1",
-    "status",
-    "amount"
+    "status"
   ],
   "fields": [
     {
       "fieldname": "naming_series",
       "fieldtype": "Series",
       "label": "Series",
-      "options": "FAC-BOK-.YYYY.-"
+      "options": "L-ASSET-.YYYY.-"
     },
     {
-      "fieldname": "guest",
-      "fieldtype": "Link",
-      "label": "Guest",
-      "options": "Guest Profile",
+      "fieldname": "asset_name",
+      "fieldtype": "Data",
+      "label": "Asset Name",
       "reqd": 1,
       "in_list_view": 1
     },
@@ -44,24 +41,14 @@
       "fieldtype": "Section Break"
     },
     {
-      "fieldname": "booking_date",
+      "fieldname": "purchase_date",
       "fieldtype": "Date",
-      "label": "Booking Date",
-      "reqd": 1,
-      "default": "Today",
-      "in_list_view": 1
+      "label": "Purchase Date"
     },
     {
-      "fieldname": "start_time",
-      "fieldtype": "Time",
-      "label": "Start Time",
-      "reqd": 1
-    },
-    {
-      "fieldname": "end_time",
-      "fieldtype": "Time",
-      "label": "End Time",
-      "reqd": 1
+      "fieldname": "next_service_date",
+      "fieldtype": "Date",
+      "label": "Next Service Date"
     },
     {
       "fieldname": "column_break_1",
@@ -71,21 +58,16 @@
       "fieldname": "status",
       "fieldtype": "Select",
       "label": "Status",
-      "options": "Booked\nCompleted\nCancelled",
-      "default": "Booked",
+      "options": "Available\nIn Use\nMaintenance\nRetired",
+      "default": "Available",
       "in_list_view": 1
-    },
-    {
-      "fieldname": "amount",
-      "fieldtype": "Currency",
-      "label": "Amount"
     }
   ],
   "links": [],
   "modified": "2024-05-08 00:00:00.000000",
   "modified_by": "Administrator",
   "module": "Membership Management",
-  "name": "Facility Booking",
+  "name": "Leisure Asset",
   "naming_rule": "By \"Naming Series\" field",
   "owner": "Administrator",
   "permissions": [
@@ -96,11 +78,7 @@
       "report": 1,
       "role": "System Manager",
       "write": 1
-    },
-    {
-      "read": 1,
-      "role": "All"
     }
   ],
-  "title_field": "guest"
+  "title_field": "asset_name"
 }

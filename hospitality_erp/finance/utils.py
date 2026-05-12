@@ -1,13 +1,20 @@
 import frappe
-from frappe.utils import today
 
-
-def flag_overdue_invoices():
-    overdue = frappe.db.get_all(
-        "Guest Invoice",
-        filters={"status": "Submitted", "due_date": ["<", today()]},
-        fields=["name", "guest", "total_amount", "balance"],
-    )
-    for inv in overdue:
-        frappe.db.set_value("Guest Invoice", inv.name, "status", "Overdue")
-    frappe.db.commit()
+def post_charge_to_folio(guest, amount, description, charge_type="Other"):
+	# Find active folio for guest
+	folio = frappe.db.get_value("Guest Folio", {"guest": guest, "status": "Open"}, "name")
+	
+	if not folio:
+		return
+		
+	folio_doc = frappe.get_doc("Guest Folio", folio)
+	folio_doc.append("charges", {
+		"description": description,
+		"charge_type": charge_type,
+		"quantity": 1,
+		"rate": amount,
+		"amount": amount,
+		"posting_date": frappe.utils.today()
+	})
+	folio_doc.save()
+	frappe.db.commit()

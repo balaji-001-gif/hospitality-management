@@ -14,7 +14,8 @@
     "column_break_1",
     "flight_number",
     "vehicle_preference",
-    "status"
+    "status",
+    "amount"
   ],
   "fields": [
     {
@@ -79,6 +80,11 @@
       "options": "Requested\nConfirmed\nCompleted\nCancelled",
       "default": "Requested",
       "in_list_view": 1
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "label": "Amount"
     }
   ],
   "links": [],

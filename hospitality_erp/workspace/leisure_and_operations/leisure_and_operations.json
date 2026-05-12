@@ -1,0 +1,45 @@
+{
+  "category": "Modules",
+  "charts": [],
+  "content": "[{\"id\":\"cb-leisure\",\"type\":\"card\",\"data\":{\"card_name\":\"Leisure and Membership\",\"col\":12}},{\"id\":\"cb-security\",\"type\":\"card\",\"data\":{\"card_name\":\"Security and Safety\",\"col\":12}},{\"id\":\"cb-concierge\",\"type\":\"card\",\"data\":{\"card_name\":\"Concierge Services\",\"col\":12}},{\"id\":\"cb-sustain\",\"type\":\"card\",\"data\":{\"card_name\":\"Sustainability\",\"col\":12}}]",
+  "creation": "2024-05-12 00:00:00.000000",
+  "developer_mode_only": 0,
+  "disable_user_customization": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "uil uil-volleyball",
+  "is_hidden": 0,
+  "label": "Leisure and Operations",
+  "modified": "2024-05-12 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Membership Management",
+  "name": "Leisure and Operations",
+  "owner": "Administrator",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "shortcuts": [],
+  "sequence_id": 105,
+  "title": "Leisure and Operations",
+
+  "links": [
+    { "hidden": 0, "idx": 1,  "is_query_report": 0, "type": "Card Break", "label": "Leisure and Membership",  "title": "Leisure and Membership",  "link_count": 0, "onboard": 1 },
+    { "hidden": 0, "idx": 2,  "is_query_report": 0, "type": "Link", "label": "Membership Plan",            "link_type": "DocType", "link_to": "Membership Plan",            "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 3,  "is_query_report": 0, "type": "Link", "label": "Leisure Membership",         "link_type": "DocType", "link_to": "Leisure Membership",         "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 4,  "is_query_report": 0, "type": "Link", "label": "Facility",                   "link_type": "DocType", "link_to": "Facility",                   "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 5,  "is_query_report": 0, "type": "Link", "label": "Facility Booking",           "link_type": "DocType", "link_to": "Facility Booking",           "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 6,  "is_query_report": 0, "type": "Link", "label": "Leisure Asset",              "link_type": "DocType", "link_to": "Leisure Asset",              "link_count": 0, "onboard": 1, "dependencies": "" },
+
+    { "hidden": 0, "idx": 7,  "is_query_report": 0, "type": "Card Break", "label": "Security and Safety",  "title": "Security and Safety",  "link_count": 0, "onboard": 1 },
+    { "hidden": 0, "idx": 8,  "is_query_report": 0, "type": "Link", "label": "Security Incident",          "link_type": "DocType", "link_to": "Security Incident",          "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 9,  "is_query_report": 0, "type": "Link", "label": "Visitor Log",                "link_type": "DocType", "link_to": "Visitor Log",                "link_count": 0, "onboard": 1, "dependencies": "" },
+
+    { "hidden": 0, "idx": 10, "is_query_report": 0, "type": "Card Break", "label": "Concierge Services",   "title": "Concierge Services",   "link_count": 0, "onboard": 1 },
+    { "hidden": 0, "idx": 11, "is_query_report": 0, "type": "Link", "label": "Transport Request",          "link_type": "DocType", "link_to": "Transport Request",          "link_count": 0, "onboard": 1, "dependencies": "" },
+    { "hidden": 0, "idx": 12, "is_query_report": 0, "type": "Link", "label": "Valet Log",                  "link_type": "DocType", "link_to": "Valet Log",                  "link_count": 0, "onboard": 1, "dependencies": "" },
+
+    { "hidden": 0, "idx": 13, "is_query_report": 0, "type": "Card Break", "label": "Sustainability",       "title": "Sustainability",       "link_count": 0, "onboard": 1 },
+    { "hidden": 0, "idx": 14, "is_query_report": 0, "type": "Link", "label": "Sustainability Log",         "link_type": "DocType", "link_to": "Sustainability Log",         "link_count": 0, "onboard": 1, "dependencies": "" }
+  ]
+}

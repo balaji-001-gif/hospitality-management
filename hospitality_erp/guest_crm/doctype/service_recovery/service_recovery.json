@@ -7,21 +7,20 @@
   "field_order": [
     "naming_series",
     "guest",
-    "facility",
-    "section_break_1",
-    "booking_date",
-    "start_time",
-    "end_time",
-    "column_break_1",
     "status",
-    "amount"
+    "section_break_1",
+    "complaint",
+    "action_taken",
+    "column_break_1",
+    "compensation_type",
+    "compensation_amount"
   ],
   "fields": [
     {
       "fieldname": "naming_series",
       "fieldtype": "Series",
       "label": "Series",
-      "options": "FAC-BOK-.YYYY.-"
+      "options": "RECOV-.YYYY.-"
     },
     {
       "fieldname": "guest",
@@ -32,11 +31,11 @@
       "in_list_view": 1
     },
     {
-      "fieldname": "facility",
-      "fieldtype": "Link",
-      "label": "Facility",
-      "options": "Facility",
-      "reqd": 1,
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Open\nResolved\nClosed",
+      "default": "Open",
       "in_list_view": 1
     },
     {
@@ -44,48 +43,36 @@
       "fieldtype": "Section Break"
     },
     {
-      "fieldname": "booking_date",
-      "fieldtype": "Date",
-      "label": "Booking Date",
-      "reqd": 1,
-      "default": "Today",
-      "in_list_view": 1
+      "fieldname": "complaint",
+      "fieldtype": "Small Text",
+      "label": "Complaint"
     },
     {
-      "fieldname": "start_time",
-      "fieldtype": "Time",
-      "label": "Start Time",
-      "reqd": 1
-    },
-    {
-      "fieldname": "end_time",
-      "fieldtype": "Time",
-      "label": "End Time",
-      "reqd": 1
+      "fieldname": "action_taken",
+      "fieldtype": "Small Text",
+      "label": "Action Taken"
     },
     {
       "fieldname": "column_break_1",
       "fieldtype": "Column Break"
     },
     {
-      "fieldname": "status",
+      "fieldname": "compensation_type",
       "fieldtype": "Select",
-      "label": "Status",
-      "options": "Booked\nCompleted\nCancelled",
-      "default": "Booked",
-      "in_list_view": 1
+      "label": "Compensation Type",
+      "options": "Discount\nFree Service\nRefund\nGift\nOther"
     },
     {
-      "fieldname": "amount",
+      "fieldname": "compensation_amount",
       "fieldtype": "Currency",
-      "label": "Amount"
+      "label": "Compensation Amount"
     }
   ],
   "links": [],
   "modified": "2024-05-08 00:00:00.000000",
   "modified_by": "Administrator",
-  "module": "Membership Management",
-  "name": "Facility Booking",
+  "module": "Guest CRM",
+  "name": "Service Recovery",
   "naming_rule": "By \"Naming Series\" field",
   "owner": "Administrator",
   "permissions": [
@@ -96,10 +83,6 @@
       "report": 1,
       "role": "System Manager",
       "write": 1
-    },
-    {
-      "read": 1,
-      "role": "All"
     }
   ],
   "title_field": "guest"
