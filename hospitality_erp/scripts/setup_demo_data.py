@@ -30,12 +30,18 @@ def setup_demo_data():
 			else:
 				properties.append(frappe.db.get_value("Property", {"property_name": name}))
 
-		# 2. Room Categories & Rooms (10 per property)
+		# 2. Room Types & Categories
+		room_types = ["Single", "Double", "Twin", "King", "Penthouse"]
+		for rt in room_types:
+			if not frappe.db.exists("Room Type", rt):
+				frappe.get_doc({"doctype": "Room Type", "room_type": rt}).insert(ignore_permissions=True)
+
 		categories = ["Standard", "Deluxe", "Superior", "Suite"]
 		for cat in categories:
 			if not frappe.db.exists("Room Category", cat):
 				frappe.get_doc({"doctype": "Room Category", "category_name": cat}).insert(ignore_permissions=True)
 
+		# 3. Rooms (10 per property)
 		for prop in properties:
 			for i in range(1, 11):
 				room_no = f"{prop[:3].upper()}-{100 + i}"
@@ -44,28 +50,30 @@ def setup_demo_data():
 						"doctype": "Room",
 						"room_number": room_no,
 						"property": prop,
+						"room_type": random.choice(room_types),
 						"room_category": random.choice(categories),
-						"status": "Available"
+						"status": "Vacant Clean"
 					}).insert(ignore_permissions=True)
 
-		# 3. Guests (10 entries)
+		# 4. Guests (10 entries)
 		guests = []
 		guest_names = ["John Doe", "Jane Smith", "Robert Brown", "Emily White", "Michael Green", "Sarah Blue", "David Black", "Linda Grey", "James Red", "Nancy Gold"]
 		for name in guest_names:
-			if not frappe.db.exists("Guest Profile", {"first_name": name.split()[0], "last_name": name.split()[1]}):
+			fname, lname = name.split()
+			if not frappe.db.exists("Guest Profile", {"first_name": fname, "last_name": lname}):
 				guest = frappe.get_doc({
 					"doctype": "Guest Profile",
 					"naming_series": "GUEST-.YYYY.-",
-					"first_name": name.split()[0],
-					"last_name": name.split()[1],
+					"first_name": fname,
+					"last_name": lname,
 					"email": f"{name.lower().replace(' ', '.')}@example.com",
 					"status": "Active"
 				}).insert(ignore_permissions=True)
 				guests.append(guest.name)
 			else:
-				guests.append(frappe.db.get_value("Guest Profile", {"first_name": name.split()[0], "last_name": name.split()[1]}))
+				guests.append(frappe.db.get_value("Guest Profile", {"first_name": fname, "last_name": lname}))
 
-		# 4. F&B Outlets & Tables (5 outlets, 5 tables each)
+		# 5. F&B Outlets & Tables (5 outlets, 5 tables each)
 		outlets = []
 		outlet_names = ["Main Dining", "Sky Bar", "Poolside Grill", "Italian Bistro", "Sushi Corner"]
 		for name in outlet_names:
@@ -91,7 +99,7 @@ def setup_demo_data():
 						"status": "Available"
 					}).insert(ignore_permissions=True)
 
-		# 5. Theme Park Attractions (5 entries)
+		# 6. Theme Park Attractions (5 entries)
 		attractions = ["Dragon Coaster", "Splash Mountain", "Space Voyage", "Haunted Mansion", "Carousel of Dreams"]
 		for name in attractions:
 			if not frappe.db.exists("Theme Park Attraction", {"attraction_name": name}):
@@ -104,7 +112,7 @@ def setup_demo_data():
 					"minimum_height": 120.0
 				}).insert(ignore_permissions=True)
 
-		# 6. Cinema Halls & Shows (5 entries)
+		# 7. Cinema Halls (5 entries)
 		for i in range(1, 6):
 			hall_name = f"Cinema Hall {i}"
 			if not frappe.db.exists("Cinema Hall", {"hall_name": hall_name}):
@@ -116,7 +124,7 @@ def setup_demo_data():
 					"screen_type": random.choice(["2D", "3D", "IMAX"])
 				}).insert(ignore_permissions=True)
 
-		# 7. Marina Berths (10 entries)
+		# 8. Marina Berths (10 entries)
 		for i in range(1, 11):
 			berth_id = f"BERTH-{i:03d}"
 			if not frappe.db.exists("Berth", {"berth_id": berth_id}):
@@ -129,7 +137,7 @@ def setup_demo_data():
 					"hourly_rate": random.randint(50, 200)
 				}).insert(ignore_permissions=True)
 
-		# 8. Cruise Cabins (10 entries)
+		# 9. Cruise Cabins (10 entries)
 		for i in range(1, 11):
 			cabin_no = f"CABIN-{1000 + i}"
 			if not frappe.db.exists("Cruise Cabin", {"cabin_number": cabin_no}):
@@ -142,7 +150,7 @@ def setup_demo_data():
 					"status": "Available"
 				}).insert(ignore_permissions=True)
 
-		# 9. IoT Sensors (10 entries)
+		# 10. IoT Sensors (10 entries)
 		sensor_types = ["Temperature", "Humidity", "Occupancy", "Energy Meter"]
 		for i in range(1, 11):
 			sensor_id = f"SENSOR-{i:04d}"
@@ -154,7 +162,7 @@ def setup_demo_data():
 					"status": "Active"
 				}).insert(ignore_permissions=True)
 
-		# 10. Spa & Recreation (5 Therapists)
+		# 11. Spa Therapists (5 entries)
 		therapist_names = ["Alice", "Bob", "Charlie", "Diana", "Edward"]
 		for name in therapist_names:
 			if not frappe.db.exists("Therapist", {"therapist_name": name}):
