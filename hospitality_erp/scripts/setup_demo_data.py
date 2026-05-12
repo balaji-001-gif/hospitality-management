@@ -30,16 +30,32 @@ def setup_demo_data():
 			else:
 				properties.append(frappe.db.get_value("Property", {"property_name": name}))
 
-		# 2. Room Types & Categories
-		room_types = ["Single", "Double", "Twin", "King", "Penthouse"]
-		for rt in room_types:
-			if not frappe.db.exists("Room Type", rt):
-				frappe.get_doc({"doctype": "Room Type", "room_type": rt}).insert(ignore_permissions=True)
-
+		# 2. Room Types & Categories (Per Property)
+		room_types_list = ["Single", "Double", "Twin", "King", "Penthouse"]
 		categories = ["Standard", "Deluxe", "Superior", "Suite"]
+		
 		for cat in categories:
 			if not frappe.db.exists("Room Category", cat):
 				frappe.get_doc({"doctype": "Room Category", "category_name": cat}).insert(ignore_permissions=True)
+
+		created_room_types = {} # {property_name: [room_type_names]}
+
+		for prop in properties:
+			created_room_types[prop] = []
+			for rt in room_types_list:
+				if not frappe.db.exists("Room Type", {"type_name": rt, "property": prop}):
+					room_type_doc = frappe.get_doc({
+						"doctype": "Room Type",
+						"naming_series": "RT-.YYYY.-",
+						"type_name": rt,
+						"property": prop,
+						"room_category": random.choice(categories),
+						"base_rate": random.randint(100, 1000),
+						"max_occupancy": 2
+					}).insert(ignore_permissions=True)
+					created_room_types[prop].append(room_type_doc.name)
+				else:
+					created_room_types[prop].append(frappe.db.get_value("Room Type", {"type_name": rt, "property": prop}))
 
 		# 3. Rooms (10 per property)
 		for prop in properties:
@@ -50,8 +66,7 @@ def setup_demo_data():
 						"doctype": "Room",
 						"room_number": room_no,
 						"property": prop,
-						"room_type": random.choice(room_types),
-						"room_category": random.choice(categories),
+						"room_type": random.choice(created_room_types[prop]),
 						"status": "Vacant Clean"
 					}).insert(ignore_permissions=True)
 
