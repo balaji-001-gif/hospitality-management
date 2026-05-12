@@ -9,9 +9,10 @@ def setup_demo_data():
 	
 	try:
 		# 1. Properties
-		if not frappe.db.exists("Property", "Royal Palm Resort"):
+		if not frappe.db.exists("Property", {"property_name": "Royal Palm Resort"}):
 			prop = frappe.get_doc({
 				"doctype": "Property",
+				"naming_series": "PROP-.YYYY.-",
 				"property_name": "Royal Palm Resort",
 				"city": "Dubai",
 				"country": "United Arab Emirates"
