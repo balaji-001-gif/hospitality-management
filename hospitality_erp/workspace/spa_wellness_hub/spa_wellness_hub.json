@@ -1,0 +1,32 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Spa & Wellness Management\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Spa Booking\",\"link_to\":\"Spa Booking\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Therapist\",\"link_to\":\"Therapist\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Spa Service\",\"link_to\":\"Spa Service\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Therapist Schedule\",\"link_to\":\"Therapist Schedule\",\"type\":\"DocType\"}}]",
+ "creation": "2024-05-12 12:10:00.000000",
+ "doctype": "Workspace",
+ "icon": "heart",
+ "indicator_color": "pink",
+ "label": "Spa & Wellness Hub",
+ "links": [
+  {
+   "label": "Bookings",
+   "type": "Link"
+  },
+  {
+   "doctype": "Spa Booking",
+   "label": "Spa Booking",
+   "type": "Link"
+  },
+  {
+   "doctype": "Therapist",
+   "label": "Therapist List",
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-12 12:10:00.000000",
+ "modified_by": "Administrator",
+ "module": "Spa Recreation",
+ "name": "Spa & Wellness Hub",
+ "owner": "Administrator",
+ "public": 1,
+ "shortcuts": []
+}

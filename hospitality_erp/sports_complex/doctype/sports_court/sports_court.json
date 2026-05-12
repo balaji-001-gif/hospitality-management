@@ -1,0 +1,73 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:court_name",
+  "creation": "2024-05-12 11:40:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "court_name",
+    "court_type",
+    "property",
+    "hourly_rate",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "court_name",
+      "fieldtype": "Data",
+      "label": "Court/Field Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "court_type",
+      "fieldtype": "Select",
+      "label": "Court Type",
+      "options": "Tennis\nBasketball\nFootball\nCricket\nBadminton\nSquash",
+      "reqd": 1
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1
+    },
+    {
+      "fieldname": "hourly_rate",
+      "fieldtype": "Currency",
+      "label": "Hourly Rate"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Available\nOccupied\nMaintenance\nClosed",
+      "default": "Available"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2024-05-12 11:40:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sports Complex",
+  "name": "Sports Court",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "states": []
+}

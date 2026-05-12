@@ -1,0 +1,32 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Events & Banquet Management\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Event\",\"link_to\":\"Event\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Facility Booking\",\"link_to\":\"Facility Booking\",\"type\":\"DocType\"}}]",
+ "creation": "2024-05-12 12:25:00.000000",
+ "doctype": "Workspace",
+ "icon": "calendar",
+ "indicator_color": "yellow",
+ "label": "Events & Banquet Control",
+ "links": [
+  {
+   "label": "Planning",
+   "type": "Link"
+  },
+  {
+   "doctype": "Event",
+   "label": "Events",
+   "type": "Link"
+  },
+  {
+   "doctype": "Facility Booking",
+   "label": "Venue Bookings",
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-12 12:25:00.000000",
+ "modified_by": "Administrator",
+ "module": "Events",
+ "name": "Events & Banquet Control",
+ "owner": "Administrator",
+ "public": 1,
+ "shortcuts": []
+}

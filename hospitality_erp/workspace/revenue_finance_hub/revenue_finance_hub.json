@@ -1,0 +1,32 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Revenue & Finance Control Center\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Guest Folio\",\"link_to\":\"Guest Folio\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Membership Invoice\",\"link_to\":\"Sales Invoice\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Revenue Report\",\"link_to\":\"Revenue Summary\",\"type\":\"Report\"}}]",
+ "creation": "2024-05-12 12:30:00.000000",
+ "doctype": "Workspace",
+ "icon": "money",
+ "indicator_color": "red",
+ "label": "Revenue & Finance Hub",
+ "links": [
+  {
+   "label": "Accounting",
+   "type": "Link"
+  },
+  {
+   "doctype": "Guest Folio",
+   "label": "Guest Folios",
+   "type": "Link"
+  },
+  {
+   "doctype": "Sales Invoice",
+   "label": "Invoices",
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-12 12:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Finance",
+ "name": "Revenue & Finance Hub",
+ "owner": "Administrator",
+ "public": 1,
+ "shortcuts": []
+}

@@ -1,0 +1,32 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"F&B and Restaurant Management\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"FnB Order\",\"link_to\":\"FnB Order\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Restaurant Table\",\"link_to\":\"Restaurant Table\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Menu Item\",\"link_to\":\"Menu Item\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Kitchen Order Ticket\",\"link_to\":\"Kitchen Order Ticket\",\"type\":\"DocType\"}}]",
+ "creation": "2024-05-12 12:05:00.000000",
+ "doctype": "Workspace",
+ "icon": "restaurant",
+ "indicator_color": "orange",
+ "label": "Restaurant Manager",
+ "links": [
+  {
+   "label": "Orders",
+   "type": "Link"
+  },
+  {
+   "doctype": "FnB Order",
+   "label": "FnB Order",
+   "type": "Link"
+  },
+  {
+   "doctype": "Restaurant Table",
+   "label": "Restaurant Table",
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-12 12:05:00.000000",
+ "modified_by": "Administrator",
+ "module": "FnB",
+ "name": "Restaurant Manager",
+ "owner": "Administrator",
+ "public": 1,
+ "shortcuts": []
+}

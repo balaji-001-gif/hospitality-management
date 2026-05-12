@@ -1,0 +1,60 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Attractions & Maritime Management\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Theme Park\",\"link_to\":\"Theme Park Attraction\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Cinema Halls\",\"link_to\":\"Cinema Hall\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Marina Berths\",\"link_to\":\"Berth\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Cruise Cabins\",\"link_to\":\"Cruise Cabin\",\"type\":\"DocType\"}}]",
+ "creation": "2024-05-12 12:20:00.000000",
+ "doctype": "Workspace",
+ "icon": "map",
+ "indicator_color": "purple",
+ "label": "Attractions & Maritime Hub",
+ "links": [
+  {
+   "label": "Theme Park",
+   "type": "Link"
+  },
+  {
+   "doctype": "Theme Park Attraction",
+   "label": "Attractions",
+   "type": "Link"
+  },
+  {
+   "doctype": "Attraction Ticket",
+   "label": "Tickets",
+   "type": "Link"
+  },
+  {
+   "label": "Cinema",
+   "type": "Link"
+  },
+  {
+   "doctype": "Cinema Hall",
+   "label": "Halls",
+   "type": "Link"
+  },
+  {
+   "doctype": "Movie Show",
+   "label": "Shows",
+   "type": "Link"
+  },
+  {
+   "label": "Maritime",
+   "type": "Link"
+  },
+  {
+   "doctype": "Berth",
+   "label": "Berths",
+   "type": "Link"
+  },
+  {
+   "doctype": "Cruise Cabin",
+   "label": "Cruise Cabins",
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-12 12:20:00.000000",
+ "modified_by": "Administrator",
+ "module": "Theme Park",
+ "name": "Attractions & Maritime Hub",
+ "owner": "Administrator",
+ "public": 1,
+ "shortcuts": []
+}

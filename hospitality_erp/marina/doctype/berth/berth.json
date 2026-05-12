@@ -1,0 +1,83 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:berth_id",
+  "creation": "2024-05-12 11:30:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "berth_id",
+    "property",
+    "length_limit",
+    "width_limit",
+    "depth_limit",
+    "status",
+    "hourly_rate"
+  ],
+  "fields": [
+    {
+      "fieldname": "berth_id",
+      "fieldtype": "Data",
+      "label": "Berth ID",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1
+    },
+    {
+      "fieldname": "length_limit",
+      "fieldtype": "Float",
+      "label": "Max Length (m)"
+    },
+    {
+      "fieldname": "width_limit",
+      "fieldtype": "Float",
+      "label": "Max Width (m)"
+    },
+    {
+      "fieldname": "depth_limit",
+      "fieldtype": "Float",
+      "label": "Max Depth (m)"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Available\nOccupied\nReserved\nMaintenance",
+      "default": "Available"
+    },
+    {
+      "fieldname": "hourly_rate",
+      "fieldtype": "Currency",
+      "label": "Hourly Rate"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2024-05-12 11:30:00.000000",
+  "modified_by": "Administrator",
+  "module": "Marina",
+  "name": "Berth",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "states": []
+}

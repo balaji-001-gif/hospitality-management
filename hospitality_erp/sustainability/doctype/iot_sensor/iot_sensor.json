@@ -1,0 +1,79 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:sensor_id",
+  "creation": "2024-05-12 12:40:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "sensor_id",
+    "sensor_type",
+    "location",
+    "status",
+    "last_reading",
+    "unit"
+  ],
+  "fields": [
+    {
+      "fieldname": "sensor_id",
+      "fieldtype": "Data",
+      "label": "Sensor ID",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "sensor_type",
+      "fieldtype": "Select",
+      "label": "Sensor Type",
+      "options": "Temperature\nHumidity\nOccupancy\nEnergy Meter\nWater Meter",
+      "reqd": 1
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location (Room/Facility)",
+      "options": "Room"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nInactive\nFaulty",
+      "default": "Active"
+    },
+    {
+      "fieldname": "last_reading",
+      "fieldtype": "Float",
+      "label": "Last Reading",
+      "read_only": 1
+    },
+    {
+      "fieldname": "unit",
+      "fieldtype": "Data",
+      "label": "Unit"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2024-05-12 12:40:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sustainability",
+  "name": "IoT Sensor",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "states": []
+}

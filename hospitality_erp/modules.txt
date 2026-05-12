@@ -14,3 +14,8 @@ Membership Management
 Security Management
 Concierge Services
 Sustainability
+Theme Park
+Cinema
+Marina
+Cruise
+Sports Complex

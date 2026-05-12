@@ -1,0 +1,79 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:cabin_number",
+  "creation": "2024-05-12 11:35:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "cabin_number",
+    "vessel_name",
+    "cabin_type",
+    "deck_level",
+    "capacity",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "cabin_number",
+      "fieldtype": "Data",
+      "label": "Cabin Number",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "vessel_name",
+      "fieldtype": "Data",
+      "label": "Vessel Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "cabin_type",
+      "fieldtype": "Select",
+      "label": "Cabin Type",
+      "options": "Interior\nOcean View\nBalcony\nSuite",
+      "reqd": 1
+    },
+    {
+      "fieldname": "deck_level",
+      "fieldtype": "Int",
+      "label": "Deck Level"
+    },
+    {
+      "fieldname": "capacity",
+      "fieldtype": "Int",
+      "label": "Capacity",
+      "default": 2
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Available\nOccupied\nMaintenance\nDirty",
+      "default": "Available"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2024-05-12 11:35:00.000000",
+  "modified_by": "Administrator",
+  "module": "Cruise",
+  "name": "Cruise Cabin",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "states": []
+}

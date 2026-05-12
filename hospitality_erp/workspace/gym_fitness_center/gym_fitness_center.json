@@ -1,0 +1,32 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Gym & Fitness Management\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Gym Membership\",\"link_to\":\"Membership\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Gym Class\",\"link_to\":\"Recreation Activity\",\"type\":\"DocType\"}}]",
+ "creation": "2024-05-12 12:15:00.000000",
+ "doctype": "Workspace",
+ "icon": "activity",
+ "indicator_color": "green",
+ "label": "Gym & Fitness Center",
+ "links": [
+  {
+   "label": "Activities",
+   "type": "Link"
+  },
+  {
+   "doctype": "Membership",
+   "label": "Memberships",
+   "type": "Link"
+  },
+  {
+   "doctype": "Recreation Activity",
+   "label": "Classes/Activities",
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-12 12:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Spa Recreation",
+ "name": "Gym & Fitness Center",
+ "owner": "Administrator",
+ "public": 1,
+ "shortcuts": []
+}

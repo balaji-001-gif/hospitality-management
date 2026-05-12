@@ -1,0 +1,32 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Hotel Front Desk Mission Control\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Room Booking\",\"link_to\":\"Room Booking\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Check-In\",\"link_to\":\"Check-In\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Check-Out\",\"link_to\":\"Check-Out\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Guest Folio\",\"link_to\":\"Guest Folio\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Housekeeping Log\",\"link_to\":\"Housekeeping Log\",\"type\":\"DocType\"}}]",
+ "creation": "2024-05-12 12:00:00.000000",
+ "doctype": "Workspace",
+ "icon": "hotel",
+ "indicator_color": "blue",
+ "label": "Hotel Front Desk",
+ "links": [
+  {
+   "label": "Reservations",
+   "type": "Link"
+  },
+  {
+   "doctype": "Room Booking",
+   "label": "Room Booking",
+   "type": "Link"
+  },
+  {
+   "doctype": "Guest",
+   "label": "Guest Database",
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-12 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Reservations",
+ "name": "Hotel Front Desk",
+ "owner": "Administrator",
+ "public": 1,
+ "shortcuts": []
+}
