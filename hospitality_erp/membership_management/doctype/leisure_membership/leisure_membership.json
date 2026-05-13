@@ -1,98 +1,100 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-05-08 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "guest",
-    "membership_plan",
-    "section_break_1",
-    "start_date",
-    "end_date",
-    "column_break_1",
-    "status",
-    "total_amount"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "L-MEM-.YYYY.-"
-    },
-    {
-      "fieldname": "guest",
-      "fieldtype": "Link",
-      "label": "Guest",
-      "options": "Guest Profile",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "membership_plan",
-      "fieldtype": "Link",
-      "label": "Membership Plan",
-      "options": "Membership Plan",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "start_date",
-      "fieldtype": "Date",
-      "label": "Start Date",
-      "reqd": 1,
-      "default": "Today"
-    },
-    {
-      "fieldname": "end_date",
-      "fieldtype": "Date",
-      "label": "End Date",
-      "reqd": 1
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "label": "Status",
-      "options": "Active\nExpired\nCancelled",
-      "default": "Active"
-    },
-    {
-      "fieldname": "total_amount",
-      "fieldtype": "Currency",
-      "label": "Total Amount",
-      "read_only": 1
-    }
-  ],
-  "links": [],
-  "modified": "2024-05-08 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Membership Management",
-  "name": "Leisure Membership",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    },
-    {
-      "read": 1,
-      "role": "All"
-    }
-  ],
-  "title_field": "guest"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-05-08 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "guest",
+  "membership_plan",
+  "section_break_1",
+  "start_date",
+  "end_date",
+  "column_break_1",
+  "status",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "L-MEM-.YYYY.-",
+   "reqd": 1,
+   "default": "L-MEM-.YYYY.-"
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "Guest Profile",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "membership_plan",
+   "fieldtype": "Link",
+   "label": "Membership Plan",
+   "options": "Membership Plan",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1,
+   "default": "Today"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired\nCancelled",
+   "default": "Active"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2024-05-08 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Membership Management",
+ "name": "Leisure Membership",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "title_field": "guest"
 }

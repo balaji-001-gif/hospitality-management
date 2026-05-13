@@ -1,108 +1,110 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-01-01 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "item_name",
-    "menu_category",
-    "outlet",
-    "section_break_1",
-    "rate",
-    "cost",
-    "margin_pct",
-    "is_veg",
-    "is_available",
-    "description"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "MENU-.YYYY.-"
-    },
-    {
-      "fieldname": "item_name",
-      "fieldtype": "Data",
-      "label": "Item Name",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "menu_category",
-      "fieldtype": "Link",
-      "label": "Category",
-      "options": "Menu Category",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "outlet",
-      "fieldtype": "Link",
-      "label": "Outlet",
-      "options": "Outlet"
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "rate",
-      "fieldtype": "Currency",
-      "label": "Selling Price",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "cost",
-      "fieldtype": "Currency",
-      "label": "Recipe Cost"
-    },
-    {
-      "fieldname": "margin_pct",
-      "fieldtype": "Percent",
-      "label": "Margin %",
-      "read_only": 1
-    },
-    {
-      "fieldname": "is_veg",
-      "fieldtype": "Check",
-      "label": "Is Vegetarian"
-    },
-    {
-      "fieldname": "is_available",
-      "fieldtype": "Check",
-      "label": "Available",
-      "default": "1"
-    },
-    {
-      "fieldname": "description",
-      "fieldtype": "Text",
-      "label": "Description"
-    }
-  ],
-  "links": [],
-  "modified": "2024-01-01 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "FnB",
-  "name": "Menu Item",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    },
-    {
-      "read": 1,
-      "role": "All"
-    }
-  ],
-  "title_field": "item_name"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "item_name",
+  "menu_category",
+  "outlet",
+  "section_break_1",
+  "rate",
+  "cost",
+  "margin_pct",
+  "is_veg",
+  "is_available",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "MENU-.YYYY.-",
+   "reqd": 1,
+   "default": "MENU-.YYYY.-"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "menu_category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Menu Category",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "outlet",
+   "fieldtype": "Link",
+   "label": "Outlet",
+   "options": "Outlet"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Selling Price",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Recipe Cost"
+  },
+  {
+   "fieldname": "margin_pct",
+   "fieldtype": "Percent",
+   "label": "Margin %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_veg",
+   "fieldtype": "Check",
+   "label": "Is Vegetarian"
+  },
+  {
+   "fieldname": "is_available",
+   "fieldtype": "Check",
+   "label": "Available",
+   "default": "1"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "FnB",
+ "name": "Menu Item",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "title_field": "item_name"
 }

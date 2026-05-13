@@ -1,89 +1,91 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-05-08 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "facility_name",
-    "facility_type",
-    "section_break_1",
-    "property",
-    "capacity",
-    "column_break_1",
-    "is_active"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "FAC-.YYYY.-"
-    },
-    {
-      "fieldname": "facility_name",
-      "fieldtype": "Data",
-      "label": "Facility Name",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "facility_type",
-      "fieldtype": "Select",
-      "label": "Facility Type",
-      "options": "Tennis Court\nSwimming Pool\nGym\nSpa\nGolf\nOther",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "property",
-      "fieldtype": "Link",
-      "label": "Property",
-      "options": "Property",
-      "reqd": 1
-    },
-    {
-      "fieldname": "capacity",
-      "fieldtype": "Int",
-      "label": "Capacity",
-      "default": "1"
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "is_active",
-      "fieldtype": "Check",
-      "label": "Is Active",
-      "default": "1"
-    }
-  ],
-  "links": [],
-  "modified": "2024-05-08 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Membership Management",
-  "name": "Facility",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    },
-    {
-      "read": 1,
-      "role": "All"
-    }
-  ],
-  "title_field": "facility_name"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-05-08 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "facility_name",
+  "facility_type",
+  "section_break_1",
+  "property",
+  "capacity",
+  "column_break_1",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "FAC-.YYYY.-",
+   "reqd": 1,
+   "default": "FAC-.YYYY.-"
+  },
+  {
+   "fieldname": "facility_name",
+   "fieldtype": "Data",
+   "label": "Facility Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "facility_type",
+   "fieldtype": "Select",
+   "label": "Facility Type",
+   "options": "Tennis Court\nSwimming Pool\nGym\nSpa\nGolf\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Capacity",
+   "default": "1"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": "1"
+  }
+ ],
+ "links": [],
+ "modified": "2024-05-08 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Membership Management",
+ "name": "Facility",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "title_field": "facility_name"
 }

@@ -1,120 +1,122 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-01-01 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "staff_name",
-    "property",
-    "training_topic",
-    "section_break_1",
-    "training_date",
-    "trainer",
-    "duration_hours",
-    "status",
-    "column_break_1",
-    "certification",
-    "valid_till",
-    "notes"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "TRN-.YYYY.-"
-    },
-    {
-      "fieldname": "staff_name",
-      "fieldtype": "Data",
-      "label": "Staff Name",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "property",
-      "fieldtype": "Link",
-      "label": "Property",
-      "options": "Property"
-    },
-    {
-      "fieldname": "training_topic",
-      "fieldtype": "Data",
-      "label": "Training Topic",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "training_date",
-      "fieldtype": "Date",
-      "label": "Training Date",
-      "default": "Today",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "trainer",
-      "fieldtype": "Data",
-      "label": "Trainer"
-    },
-    {
-      "fieldname": "duration_hours",
-      "fieldtype": "Float",
-      "label": "Duration (hrs)"
-    },
-    {
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "label": "Status",
-      "options": "\nScheduled\nCompleted\nFailed",
-      "default": "Scheduled",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "certification",
-      "fieldtype": "Data",
-      "label": "Certification Issued"
-    },
-    {
-      "fieldname": "valid_till",
-      "fieldtype": "Date",
-      "label": "Valid Till"
-    },
-    {
-      "fieldname": "notes",
-      "fieldtype": "Text",
-      "label": "Notes"
-    }
-  ],
-  "links": [],
-  "modified": "2024-01-01 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "HR Staffing",
-  "name": "Training Record",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    },
-    {
-      "read": 1,
-      "role": "All"
-    }
-  ],
-  "title_field": "staff_name"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "staff_name",
+  "property",
+  "training_topic",
+  "section_break_1",
+  "training_date",
+  "trainer",
+  "duration_hours",
+  "status",
+  "column_break_1",
+  "certification",
+  "valid_till",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "TRN-.YYYY.-",
+   "reqd": 1,
+   "default": "TRN-.YYYY.-"
+  },
+  {
+   "fieldname": "staff_name",
+   "fieldtype": "Data",
+   "label": "Staff Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "training_topic",
+   "fieldtype": "Data",
+   "label": "Training Topic",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "training_date",
+   "fieldtype": "Date",
+   "label": "Training Date",
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Data",
+   "label": "Trainer"
+  },
+  {
+   "fieldname": "duration_hours",
+   "fieldtype": "Float",
+   "label": "Duration (hrs)"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nScheduled\nCompleted\nFailed",
+   "default": "Scheduled",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "certification",
+   "fieldtype": "Data",
+   "label": "Certification Issued"
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Valid Till"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "HR Staffing",
+ "name": "Training Record",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "title_field": "staff_name"
 }

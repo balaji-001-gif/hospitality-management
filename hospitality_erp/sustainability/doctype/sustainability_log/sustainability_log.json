@@ -1,92 +1,94 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-05-08 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "property",
-    "log_date",
-    "section_break_1",
-    "energy_usage_kwh",
-    "water_usage_liters",
-    "column_break_1",
-    "waste_recycled_kg",
-    "waste_general_kg"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "SUS-.YYYY.-"
-    },
-    {
-      "fieldname": "property",
-      "fieldtype": "Link",
-      "label": "Property",
-      "options": "Property",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "log_date",
-      "fieldtype": "Date",
-      "label": "Log Date",
-      "reqd": 1,
-      "default": "Today",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "energy_usage_kwh",
-      "fieldtype": "Float",
-      "label": "Energy Usage (kWh)"
-    },
-    {
-      "fieldname": "water_usage_liters",
-      "fieldtype": "Float",
-      "label": "Water Usage (Liters)"
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "waste_recycled_kg",
-      "fieldtype": "Float",
-      "label": "Waste Recycled (kg)"
-    },
-    {
-      "fieldname": "waste_general_kg",
-      "fieldtype": "Float",
-      "label": "Waste General (kg)"
-    }
-  ],
-  "links": [],
-  "modified": "2024-05-08 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Sustainability",
-  "name": "Sustainability Log",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    },
-    {
-      "read": 1,
-      "role": "All"
-    }
-  ],
-  "title_field": "property"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-05-08 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "property",
+  "log_date",
+  "section_break_1",
+  "energy_usage_kwh",
+  "water_usage_liters",
+  "column_break_1",
+  "waste_recycled_kg",
+  "waste_general_kg"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "SUS-.YYYY.-",
+   "reqd": 1,
+   "default": "SUS-.YYYY.-"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "log_date",
+   "fieldtype": "Date",
+   "label": "Log Date",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "energy_usage_kwh",
+   "fieldtype": "Float",
+   "label": "Energy Usage (kWh)"
+  },
+  {
+   "fieldname": "water_usage_liters",
+   "fieldtype": "Float",
+   "label": "Water Usage (Liters)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "waste_recycled_kg",
+   "fieldtype": "Float",
+   "label": "Waste Recycled (kg)"
+  },
+  {
+   "fieldname": "waste_general_kg",
+   "fieldtype": "Float",
+   "label": "Waste General (kg)"
+  }
+ ],
+ "links": [],
+ "modified": "2024-05-08 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sustainability",
+ "name": "Sustainability Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "title_field": "property"
 }

@@ -1,142 +1,144 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "is_submittable": 1,
-  "creation": "2024-01-01 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "reservation",
-    "guest",
-    "room",
-    "property",
-    "section_break_1",
-    "check_in_datetime",
-    "expected_checkout",
-    "adults",
-    "children",
-    "column_break_1",
-    "id_verified",
-    "key_issued",
-    "notes",
-    "amended_from"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "CI-.YYYY.-"
-    },
-    {
-      "fieldname": "reservation",
-      "fieldtype": "Link",
-      "label": "Reservation",
-      "options": "Reservation",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "guest",
-      "fieldtype": "Link",
-      "label": "Guest",
-      "options": "Guest Profile",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "room",
-      "fieldtype": "Link",
-      "label": "Room",
-      "options": "Room",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "property",
-      "fieldtype": "Link",
-      "label": "Property",
-      "options": "Property"
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "check_in_datetime",
-      "fieldtype": "Datetime",
-      "label": "Check-In Time",
-      "default": "Now"
-    },
-    {
-      "fieldname": "expected_checkout",
-      "fieldtype": "Date",
-      "label": "Expected Check-Out"
-    },
-    {
-      "fieldname": "adults",
-      "fieldtype": "Int",
-      "label": "Adults",
-      "default": "1"
-    },
-    {
-      "fieldname": "children",
-      "fieldtype": "Int",
-      "label": "Children",
-      "default": "0"
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "id_verified",
-      "fieldtype": "Check",
-      "label": "ID Verified"
-    },
-    {
-      "fieldname": "key_issued",
-      "fieldtype": "Check",
-      "label": "Key Issued"
-    },
-    {
-      "fieldname": "notes",
-      "fieldtype": "Text",
-      "label": "Notes"
-    },
-    {
-      "fieldname": "amended_from",
-      "fieldtype": "Link",
-      "label": "Amended From",
-      "no_copy": 1,
-      "options": "Check In",
-      "read_only": 1
-    }
-  ],
-  "links": [],
-  "modified": "2024-01-01 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Reservations",
-  "name": "Check In",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "submit": 1,
-      "cancel": 1,
-      "write": 1
-    },
-    {
-      "create": 1,
-      "read": 1,
-      "role": "All",
-      "write": 1
-    }
-  ],
-  "title_field": "guest"
+ "actions": [],
+ "autoname": "naming_series:",
+ "is_submittable": 1,
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "reservation",
+  "guest",
+  "room",
+  "property",
+  "section_break_1",
+  "check_in_datetime",
+  "expected_checkout",
+  "adults",
+  "children",
+  "column_break_1",
+  "id_verified",
+  "key_issued",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "CI-.YYYY.-",
+   "reqd": 1,
+   "default": "CI-.YYYY.-"
+  },
+  {
+   "fieldname": "reservation",
+   "fieldtype": "Link",
+   "label": "Reservation",
+   "options": "Reservation",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "Guest Profile",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "Room",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "check_in_datetime",
+   "fieldtype": "Datetime",
+   "label": "Check-In Time",
+   "default": "Now"
+  },
+  {
+   "fieldname": "expected_checkout",
+   "fieldtype": "Date",
+   "label": "Expected Check-Out"
+  },
+  {
+   "fieldname": "adults",
+   "fieldtype": "Int",
+   "label": "Adults",
+   "default": "1"
+  },
+  {
+   "fieldname": "children",
+   "fieldtype": "Int",
+   "label": "Children",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_verified",
+   "fieldtype": "Check",
+   "label": "ID Verified"
+  },
+  {
+   "fieldname": "key_issued",
+   "fieldtype": "Check",
+   "label": "Key Issued"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Check In",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Reservations",
+ "name": "Check In",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "submit": 1,
+   "cancel": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "All",
+   "write": 1
+  }
+ ],
+ "title_field": "guest"
 }

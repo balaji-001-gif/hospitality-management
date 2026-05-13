@@ -1,142 +1,144 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-01-01 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "guest",
-    "reservation",
-    "property",
-    "feedback_date",
-    "section_break_1",
-    "overall_rating",
-    "room_rating",
-    "service_rating",
-    "fnb_rating",
-    "column_break_1",
-    "would_recommend",
-    "status",
-    "section_break_2",
-    "comments",
-    "staff_response"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "GFB-.YYYY.-"
-    },
-    {
-      "fieldname": "guest",
-      "fieldtype": "Link",
-      "label": "Guest",
-      "options": "Guest Profile",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "reservation",
-      "fieldtype": "Link",
-      "label": "Reservation",
-      "options": "Reservation"
-    },
-    {
-      "fieldname": "property",
-      "fieldtype": "Link",
-      "label": "Property",
-      "options": "Property",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "feedback_date",
-      "fieldtype": "Date",
-      "label": "Date",
-      "default": "Today"
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "overall_rating",
-      "fieldtype": "Select",
-      "label": "Overall Rating",
-      "options": "\n1\n2\n3\n4\n5",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "room_rating",
-      "fieldtype": "Select",
-      "label": "Room Rating",
-      "options": "\n1\n2\n3\n4\n5"
-    },
-    {
-      "fieldname": "service_rating",
-      "fieldtype": "Select",
-      "label": "Service Rating",
-      "options": "\n1\n2\n3\n4\n5"
-    },
-    {
-      "fieldname": "fnb_rating",
-      "fieldtype": "Select",
-      "label": "F&B Rating",
-      "options": "\n1\n2\n3\n4\n5"
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "would_recommend",
-      "fieldtype": "Check",
-      "label": "Would Recommend"
-    },
-    {
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "label": "Status",
-      "options": "\nNew\nReviewed\nActioned",
-      "default": "New"
-    },
-    {
-      "fieldname": "section_break_2",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "comments",
-      "fieldtype": "Text Editor",
-      "label": "Guest Comments"
-    },
-    {
-      "fieldname": "staff_response",
-      "fieldtype": "Text Editor",
-      "label": "Staff Response"
-    }
-  ],
-  "links": [],
-  "modified": "2024-01-01 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Guest CRM",
-  "name": "Guest Feedback",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    },
-    {
-      "create": 1,
-      "read": 1,
-      "role": "All"
-    }
-  ],
-  "title_field": "guest"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "guest",
+  "reservation",
+  "property",
+  "feedback_date",
+  "section_break_1",
+  "overall_rating",
+  "room_rating",
+  "service_rating",
+  "fnb_rating",
+  "column_break_1",
+  "would_recommend",
+  "status",
+  "section_break_2",
+  "comments",
+  "staff_response"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "GFB-.YYYY.-",
+   "reqd": 1,
+   "default": "GFB-.YYYY.-"
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "Guest Profile",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reservation",
+   "fieldtype": "Link",
+   "label": "Reservation",
+   "options": "Reservation"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "feedback_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "overall_rating",
+   "fieldtype": "Select",
+   "label": "Overall Rating",
+   "options": "\n1\n2\n3\n4\n5",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "room_rating",
+   "fieldtype": "Select",
+   "label": "Room Rating",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "service_rating",
+   "fieldtype": "Select",
+   "label": "Service Rating",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "fnb_rating",
+   "fieldtype": "Select",
+   "label": "F&B Rating",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "would_recommend",
+   "fieldtype": "Check",
+   "label": "Would Recommend"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nNew\nReviewed\nActioned",
+   "default": "New"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Guest Comments"
+  },
+  {
+   "fieldname": "staff_response",
+   "fieldtype": "Text Editor",
+   "label": "Staff Response"
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Guest CRM",
+ "name": "Guest Feedback",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "title_field": "guest"
 }

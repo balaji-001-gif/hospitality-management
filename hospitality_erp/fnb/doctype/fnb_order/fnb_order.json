@@ -25,9 +25,11 @@
  "fields": [
   {
    "fieldname": "naming_series",
-   "fieldtype": "Data",
+   "fieldtype": "Series",
    "label": "Series",
-   "options": "FNBO-.YYYY.-"
+   "options": "FNBO-.YYYY.-",
+   "reqd": 1,
+   "default": "FNBO-.YYYY.-"
   },
   {
    "fieldname": "outlet",

@@ -1,79 +1,81 @@
 {
-  "actions": [],
-  "allow_rename": 1,
-  "autoname": "naming_series:",
-  "creation": "2024-05-12 11:25:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "movie_name",
-    "cinema_hall",
-    "show_time",
-    "base_price",
-    "status"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Select",
-      "label": "Series",
-      "options": "SHOW-.YYYY.-"
-    },
-    {
-      "fieldname": "movie_name",
-      "fieldtype": "Data",
-      "label": "Movie Name",
-      "reqd": 1
-    },
-    {
-      "fieldname": "cinema_hall",
-      "fieldtype": "Link",
-      "label": "Cinema Hall",
-      "options": "Cinema Hall",
-      "reqd": 1
-    },
-    {
-      "fieldname": "show_time",
-      "fieldtype": "Datetime",
-      "label": "Show Time",
-      "reqd": 1
-    },
-    {
-      "fieldname": "base_price",
-      "fieldtype": "Currency",
-      "label": "Base Price",
-      "reqd": 1
-    },
-    {
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "label": "Status",
-      "options": "Scheduled\nOpen\nSold Out\nCompleted\nCancelled",
-      "default": "Scheduled"
-    }
-  ],
-  "index_web_pages_for_search": 1,
-  "links": [],
-  "modified": "2024-05-12 11:25:00.000000",
-  "modified_by": "Administrator",
-  "module": "Cinema",
-  "name": "Movie Show",
-  "naming_rule": "By \"Naming Series\"",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-    }
-  ],
-  "states": []
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-12 11:25:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "movie_name",
+  "cinema_hall",
+  "show_time",
+  "base_price",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "SHOW-.YYYY.-",
+   "reqd": 1,
+   "default": "SHOW-.YYYY.-"
+  },
+  {
+   "fieldname": "movie_name",
+   "fieldtype": "Data",
+   "label": "Movie Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cinema_hall",
+   "fieldtype": "Link",
+   "label": "Cinema Hall",
+   "options": "Cinema Hall",
+   "reqd": 1
+  },
+  {
+   "fieldname": "show_time",
+   "fieldtype": "Datetime",
+   "label": "Show Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "base_price",
+   "fieldtype": "Currency",
+   "label": "Base Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nOpen\nSold Out\nCompleted\nCancelled",
+   "default": "Scheduled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-12 11:25:00.000000",
+ "modified_by": "Administrator",
+ "module": "Cinema",
+ "name": "Movie Show",
+ "naming_rule": "By \"Naming Series\"",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "states": []
 }

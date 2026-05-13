@@ -1,84 +1,86 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-05-08 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "asset_name",
-    "facility",
-    "section_break_1",
-    "purchase_date",
-    "next_service_date",
-    "column_break_1",
-    "status"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "L-ASSET-.YYYY.-"
-    },
-    {
-      "fieldname": "asset_name",
-      "fieldtype": "Data",
-      "label": "Asset Name",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "facility",
-      "fieldtype": "Link",
-      "label": "Facility",
-      "options": "Facility",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "purchase_date",
-      "fieldtype": "Date",
-      "label": "Purchase Date"
-    },
-    {
-      "fieldname": "next_service_date",
-      "fieldtype": "Date",
-      "label": "Next Service Date"
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "label": "Status",
-      "options": "Available\nIn Use\nMaintenance\nRetired",
-      "default": "Available",
-      "in_list_view": 1
-    }
-  ],
-  "links": [],
-  "modified": "2024-05-08 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Membership Management",
-  "name": "Leisure Asset",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    }
-  ],
-  "title_field": "asset_name"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-05-08 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "asset_name",
+  "facility",
+  "section_break_1",
+  "purchase_date",
+  "next_service_date",
+  "column_break_1",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "L-ASSET-.YYYY.-",
+   "reqd": 1,
+   "default": "L-ASSET-.YYYY.-"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "facility",
+   "fieldtype": "Link",
+   "label": "Facility",
+   "options": "Facility",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "next_service_date",
+   "fieldtype": "Date",
+   "label": "Next Service Date"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nIn Use\nMaintenance\nRetired",
+   "default": "Available",
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2024-05-08 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Membership Management",
+ "name": "Leisure Asset",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "title_field": "asset_name"
 }

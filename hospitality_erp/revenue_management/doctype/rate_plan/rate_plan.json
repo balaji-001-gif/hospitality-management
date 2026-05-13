@@ -1,126 +1,128 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-01-01 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "plan_name",
-    "property",
-    "rate_category",
-    "section_break_1",
-    "valid_from",
-    "valid_to",
-    "min_stay",
-    "max_stay",
-    "column_break_1",
-    "base_rate",
-    "discount_pct",
-    "net_rate",
-    "is_active"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "RP-.YYYY.-"
-    },
-    {
-      "fieldname": "plan_name",
-      "fieldtype": "Data",
-      "label": "Plan Name",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "property",
-      "fieldtype": "Link",
-      "label": "Property",
-      "options": "Property",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "rate_category",
-      "fieldtype": "Link",
-      "label": "Rate Category",
-      "options": "Rate Category",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "valid_from",
-      "fieldtype": "Date",
-      "label": "Valid From"
-    },
-    {
-      "fieldname": "valid_to",
-      "fieldtype": "Date",
-      "label": "Valid To"
-    },
-    {
-      "fieldname": "min_stay",
-      "fieldtype": "Int",
-      "label": "Min Stay (nights)",
-      "default": "1"
-    },
-    {
-      "fieldname": "max_stay",
-      "fieldtype": "Int",
-      "label": "Max Stay (nights)"
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "base_rate",
-      "fieldtype": "Currency",
-      "label": "Base Rate",
-      "reqd": 1
-    },
-    {
-      "fieldname": "discount_pct",
-      "fieldtype": "Percent",
-      "label": "Discount %"
-    },
-    {
-      "fieldname": "net_rate",
-      "fieldtype": "Currency",
-      "label": "Net Rate",
-      "read_only": 1
-    },
-    {
-      "fieldname": "is_active",
-      "fieldtype": "Check",
-      "label": "Is Active",
-      "default": "1"
-    }
-  ],
-  "links": [],
-  "modified": "2024-01-01 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Revenue Management",
-  "name": "Rate Plan",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    },
-    {
-      "read": 1,
-      "role": "All"
-    }
-  ],
-  "title_field": "plan_name"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "plan_name",
+  "property",
+  "rate_category",
+  "section_break_1",
+  "valid_from",
+  "valid_to",
+  "min_stay",
+  "max_stay",
+  "column_break_1",
+  "base_rate",
+  "discount_pct",
+  "net_rate",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "RP-.YYYY.-",
+   "reqd": 1,
+   "default": "RP-.YYYY.-"
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "label": "Plan Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rate_category",
+   "fieldtype": "Link",
+   "label": "Rate Category",
+   "options": "Rate Category",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From"
+  },
+  {
+   "fieldname": "valid_to",
+   "fieldtype": "Date",
+   "label": "Valid To"
+  },
+  {
+   "fieldname": "min_stay",
+   "fieldtype": "Int",
+   "label": "Min Stay (nights)",
+   "default": "1"
+  },
+  {
+   "fieldname": "max_stay",
+   "fieldtype": "Int",
+   "label": "Max Stay (nights)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_rate",
+   "fieldtype": "Currency",
+   "label": "Base Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "discount_pct",
+   "fieldtype": "Percent",
+   "label": "Discount %"
+  },
+  {
+   "fieldname": "net_rate",
+   "fieldtype": "Currency",
+   "label": "Net Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": "1"
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Revenue Management",
+ "name": "Rate Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "title_field": "plan_name"
 }

@@ -1,71 +1,73 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-01-01 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "guest",
-    "preference_type",
-    "preference_value",
-    "notes"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "GPREF-.YYYY.-"
-    },
-    {
-      "fieldname": "guest",
-      "fieldtype": "Link",
-      "label": "Guest",
-      "options": "Guest Profile",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "preference_type",
-      "fieldtype": "Select",
-      "label": "Preference Type",
-      "options": "\nPillow\nFood\nRoom Location\nFloor\nTemperature\nNewspaper\nOther",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "preference_value",
-      "fieldtype": "Data",
-      "label": "Preference",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "notes",
-      "fieldtype": "Text",
-      "label": "Notes"
-    }
-  ],
-  "links": [],
-  "modified": "2024-01-01 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Guest CRM",
-  "name": "Guest Preference",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    },
-    {
-      "create": 1,
-      "read": 1,
-      "role": "All"
-    }
-  ],
-  "title_field": "guest"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "guest",
+  "preference_type",
+  "preference_value",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "GPREF-.YYYY.-",
+   "reqd": 1,
+   "default": "GPREF-.YYYY.-"
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "Guest Profile",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "preference_type",
+   "fieldtype": "Select",
+   "label": "Preference Type",
+   "options": "\nPillow\nFood\nRoom Location\nFloor\nTemperature\nNewspaper\nOther",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "preference_value",
+   "fieldtype": "Data",
+   "label": "Preference",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Guest CRM",
+ "name": "Guest Preference",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "title_field": "guest"
 }

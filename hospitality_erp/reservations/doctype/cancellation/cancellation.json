@@ -1,105 +1,107 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "creation": "2024-01-01 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "reservation",
-    "guest",
-    "property",
-    "cancellation_date",
-    "reason",
-    "penalty_type",
-    "penalty_amount",
-    "refund_amount",
-    "notes"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "CNCL-.YYYY.-"
-    },
-    {
-      "fieldname": "reservation",
-      "fieldtype": "Link",
-      "label": "Reservation",
-      "options": "Reservation",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "guest",
-      "fieldtype": "Link",
-      "label": "Guest",
-      "options": "Guest Profile",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "property",
-      "fieldtype": "Link",
-      "label": "Property",
-      "options": "Property"
-    },
-    {
-      "fieldname": "cancellation_date",
-      "fieldtype": "Date",
-      "label": "Cancellation Date",
-      "default": "Today"
-    },
-    {
-      "fieldname": "reason",
-      "fieldtype": "Select",
-      "label": "Reason",
-      "options": "\nGuest Request\nNo Payment\nDuplicate\nForce Majeure\nOther"
-    },
-    {
-      "fieldname": "penalty_type",
-      "fieldtype": "Select",
-      "label": "Penalty Type",
-      "options": "\nNone\nFirst Night\nFull Stay\nCustom"
-    },
-    {
-      "fieldname": "penalty_amount",
-      "fieldtype": "Currency",
-      "label": "Penalty Amount"
-    },
-    {
-      "fieldname": "refund_amount",
-      "fieldtype": "Currency",
-      "label": "Refund Amount"
-    },
-    {
-      "fieldname": "notes",
-      "fieldtype": "Text",
-      "label": "Notes"
-    }
-  ],
-  "links": [],
-  "modified": "2024-01-01 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Reservations",
-  "name": "Cancellation",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "write": 1
-    },
-    {
-      "create": 1,
-      "read": 1,
-      "role": "All",
-      "write": 1
-    }
-  ],
-  "title_field": "reservation"
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "reservation",
+  "guest",
+  "property",
+  "cancellation_date",
+  "reason",
+  "penalty_type",
+  "penalty_amount",
+  "refund_amount",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "CNCL-.YYYY.-",
+   "reqd": 1,
+   "default": "CNCL-.YYYY.-"
+  },
+  {
+   "fieldname": "reservation",
+   "fieldtype": "Link",
+   "label": "Reservation",
+   "options": "Reservation",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "Guest Profile",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "cancellation_date",
+   "fieldtype": "Date",
+   "label": "Cancellation Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Select",
+   "label": "Reason",
+   "options": "\nGuest Request\nNo Payment\nDuplicate\nForce Majeure\nOther"
+  },
+  {
+   "fieldname": "penalty_type",
+   "fieldtype": "Select",
+   "label": "Penalty Type",
+   "options": "\nNone\nFirst Night\nFull Stay\nCustom"
+  },
+  {
+   "fieldname": "penalty_amount",
+   "fieldtype": "Currency",
+   "label": "Penalty Amount"
+  },
+  {
+   "fieldname": "refund_amount",
+   "fieldtype": "Currency",
+   "label": "Refund Amount"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Reservations",
+ "name": "Cancellation",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "All",
+   "write": 1
+  }
+ ],
+ "title_field": "reservation"
 }
