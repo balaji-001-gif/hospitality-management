@@ -1,26 +1,24 @@
 {
+ "category": "Modules",
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Gym & Fitness Management\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Gym Membership\",\"link_to\":\"Membership\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Gym Class\",\"link_to\":\"Recreation Activity\",\"type\":\"DocType\"}}]",
+ "content": "[{\"id\":\"cb-activities\",\"type\":\"card\",\"data\":{\"card_name\":\"Activities\",\"col\":12}},{\"id\":\"cb-setup\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":12}}]",
  "creation": "2024-05-12 12:15:00.000000",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
  "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
  "icon": "activity",
  "indicator_color": "green",
+ "is_hidden": 0,
  "label": "Gym & Fitness Center",
  "links": [
-  {
-   "label": "Activities",
-   "type": "Link"
-  },
-  {
-   "doctype": "Membership",
-   "label": "Memberships",
-   "type": "Link"
-  },
-  {
-   "doctype": "Recreation Activity",
-   "label": "Classes/Activities",
-   "type": "Link"
-  }
+  { "hidden": 0, "idx": 1, "is_query_report": 0, "label": "Activities",         "link_count": 0, "onboard": 1, "type": "Card Break" },
+  { "hidden": 0, "idx": 2, "is_query_report": 0, "label": "Memberships",        "link_count": 0, "link_to": "Membership",          "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 3, "is_query_report": 0, "label": "Classes/Activities", "link_count": 0, "link_to": "Recreation Activity", "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+
+  { "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Setup",              "link_count": 0, "onboard": 0, "type": "Card Break" },
+  { "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Sports Complex",     "link_count": 0, "link_to": "Sports Complex",      "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
  ],
  "modified": "2024-05-12 12:15:00.000000",
  "modified_by": "Administrator",
@@ -28,5 +26,9 @@
  "name": "Gym & Fitness Center",
  "owner": "Administrator",
  "public": 1,
- "shortcuts": []
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 107,
+ "shortcuts": [],
+ "title": "Gym & Fitness Center"
 }

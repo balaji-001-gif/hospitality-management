@@ -1,26 +1,25 @@
 {
+ "category": "Modules",
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Spa & Wellness Management\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Spa Booking\",\"link_to\":\"Spa Booking\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Therapist\",\"link_to\":\"Therapist\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Spa Service\",\"link_to\":\"Spa Service\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Therapist Schedule\",\"link_to\":\"Therapist Schedule\",\"type\":\"DocType\"}}]",
+ "content": "[{\"id\":\"cb-bookings\",\"type\":\"card\",\"data\":{\"card_name\":\"Bookings\",\"col\":12}},{\"id\":\"cb-setup\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":12}}]",
  "creation": "2024-05-12 12:10:00.000000",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
  "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
  "icon": "heart",
  "indicator_color": "pink",
+ "is_hidden": 0,
  "label": "Spa & Wellness Hub",
  "links": [
-  {
-   "label": "Bookings",
-   "type": "Link"
-  },
-  {
-   "doctype": "Spa Booking",
-   "label": "Spa Booking",
-   "type": "Link"
-  },
-  {
-   "doctype": "Therapist",
-   "label": "Therapist List",
-   "type": "Link"
-  }
+  { "hidden": 0, "idx": 1, "is_query_report": 0, "label": "Bookings",            "link_count": 0, "onboard": 1, "type": "Card Break" },
+  { "hidden": 0, "idx": 2, "is_query_report": 0, "label": "Spa Booking",         "link_count": 0, "link_to": "Spa Booking",        "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 3, "is_query_report": 0, "label": "Therapist List",      "link_count": 0, "link_to": "Therapist",          "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Therapist Schedule",  "link_count": 0, "link_to": "Therapist Schedule", "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+
+  { "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Setup",               "link_count": 0, "onboard": 0, "type": "Card Break" },
+  { "hidden": 0, "idx": 6, "is_query_report": 0, "label": "Spa Service",         "link_count": 0, "link_to": "Spa Service",        "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
  ],
  "modified": "2024-05-12 12:10:00.000000",
  "modified_by": "Administrator",
@@ -28,5 +27,9 @@
  "name": "Spa & Wellness Hub",
  "owner": "Administrator",
  "public": 1,
- "shortcuts": []
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 108,
+ "shortcuts": [],
+ "title": "Spa & Wellness Hub"
 }

@@ -1,54 +1,29 @@
 {
+ "category": "Modules",
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Attractions & Maritime Management\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Theme Park\",\"link_to\":\"Theme Park Attraction\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Cinema Halls\",\"link_to\":\"Cinema Hall\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Marina Berths\",\"link_to\":\"Berth\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"label\":\"Cruise Cabins\",\"link_to\":\"Cruise Cabin\",\"type\":\"DocType\"}}]",
+ "content": "[{\"id\":\"cb-themepark\",\"type\":\"card\",\"data\":{\"card_name\":\"Theme Park\",\"col\":12}},{\"id\":\"cb-cinema\",\"type\":\"card\",\"data\":{\"card_name\":\"Cinema\",\"col\":12}},{\"id\":\"cb-maritime\",\"type\":\"card\",\"data\":{\"card_name\":\"Maritime\",\"col\":12}}]",
  "creation": "2024-05-12 12:20:00.000000",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
  "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
  "icon": "map",
  "indicator_color": "purple",
+ "is_hidden": 0,
  "label": "Attractions & Maritime Hub",
  "links": [
-  {
-   "label": "Theme Park",
-   "type": "Link"
-  },
-  {
-   "doctype": "Theme Park Attraction",
-   "label": "Attractions",
-   "type": "Link"
-  },
-  {
-   "doctype": "Attraction Ticket",
-   "label": "Tickets",
-   "type": "Link"
-  },
-  {
-   "label": "Cinema",
-   "type": "Link"
-  },
-  {
-   "doctype": "Cinema Hall",
-   "label": "Halls",
-   "type": "Link"
-  },
-  {
-   "doctype": "Movie Show",
-   "label": "Shows",
-   "type": "Link"
-  },
-  {
-   "label": "Maritime",
-   "type": "Link"
-  },
-  {
-   "doctype": "Berth",
-   "label": "Berths",
-   "type": "Link"
-  },
-  {
-   "doctype": "Cruise Cabin",
-   "label": "Cruise Cabins",
-   "type": "Link"
-  }
+  { "hidden": 0, "idx": 1,  "is_query_report": 0, "label": "Theme Park",          "link_count": 0, "onboard": 1, "type": "Card Break" },
+  { "hidden": 0, "idx": 2,  "is_query_report": 0, "label": "Attractions",         "link_count": 0, "link_to": "Theme Park Attraction", "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 3,  "is_query_report": 0, "label": "Tickets",             "link_count": 0, "link_to": "Attraction Ticket",     "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+
+  { "hidden": 0, "idx": 4,  "is_query_report": 0, "label": "Cinema",             "link_count": 0, "onboard": 1, "type": "Card Break" },
+  { "hidden": 0, "idx": 5,  "is_query_report": 0, "label": "Halls",              "link_count": 0, "link_to": "Cinema Hall",            "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 6,  "is_query_report": 0, "label": "Shows",              "link_count": 0, "link_to": "Movie Show",             "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+
+  { "hidden": 0, "idx": 7,  "is_query_report": 0, "label": "Maritime",           "link_count": 0, "onboard": 1, "type": "Card Break" },
+  { "hidden": 0, "idx": 8,  "is_query_report": 0, "label": "Berths",             "link_count": 0, "link_to": "Berth",                 "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 9,  "is_query_report": 0, "label": "Cruise Cabins",      "link_count": 0, "link_to": "Cruise Cabin",          "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
  ],
  "modified": "2024-05-12 12:20:00.000000",
  "modified_by": "Administrator",
@@ -56,5 +31,9 @@
  "name": "Attractions & Maritime Hub",
  "owner": "Administrator",
  "public": 1,
- "shortcuts": []
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 106,
+ "shortcuts": [],
+ "title": "Attractions & Maritime Hub"
 }
