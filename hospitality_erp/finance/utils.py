@@ -1,37 +1,48 @@
 import frappe
+from frappe import _
+from frappe.utils import flt
 
-def post_charge_to_folio(guest, amount, description, charge_type="Other"):
-	# Find active folio for guest
-	folio = frappe.db.get_value("Guest Folio", {"guest": guest, "status": "Open"}, "name")
-	
-	if not folio:
+def make_gl_entries(doc, debit_account, credit_account, amount, posting_date=None):
+	"""Creates General Ledger entries for a transaction."""
+	if not amount:
 		return
-		
-	folio_doc = frappe.get_doc("Guest Folio", folio)
-	folio_doc.append("charges", {
-		"description": description,
-		"charge_type": charge_type,
-		"quantity": 1,
-		"rate": amount,
-		"amount": amount,
-		"posting_date": frappe.utils.today()
-	})
-	folio_doc.save()
-	frappe.db.commit()
 
-def flag_overdue_invoices():
-	"""Finds unpaid Sales Invoices that are past their due date and flags them."""
-	overdue_invoices = frappe.get_all(
-		"Sales Invoice",
-		filters={
-			"docstatus": 1,
-			"status": ["!=", "Paid"],
-			"due_date": ["<", frappe.utils.today()]
-		},
-		fields=["name", "customer", "due_date"]
-	)
-	
-	for inv in overdue_invoices:
-		# Logic to flag or notify
-		# In a real system, you might change the status or send a reminder
-		frappe.log_error(f"Invoice {inv.name} is overdue since {inv.due_date}", "Billing Alert")
+	company = get_company(doc)
+	if not company:
+		frappe.msgprint(_("Please set Company in Property {0} to enable accounting entries").format(doc.property))
+		return
+
+	posting_date = posting_date or doc.get("posting_date") or doc.get("creation")
+
+	# Debit Entry
+	frappe.get_doc({
+		"doctype": "GL Entry",
+		"posting_date": posting_date,
+		"account": debit_account,
+		"debit": flt(amount),
+		"credit": 0,
+		"company": company,
+		"voucher_type": doc.doctype,
+		"voucher_no": doc.name,
+		"remarks": _("Hospitality Transaction: {0}").format(doc.name)
+	}).insert(ignore_permissions=True)
+
+	# Credit Entry
+	frappe.get_doc({
+		"doctype": "GL Entry",
+		"posting_date": posting_date,
+		"account": credit_account,
+		"debit": 0,
+		"credit": flt(amount),
+		"company": company,
+		"voucher_type": doc.doctype,
+		"voucher_no": doc.name,
+		"remarks": _("Hospitality Transaction: {0}").format(doc.name)
+	}).insert(ignore_permissions=True)
+
+def get_company(doc):
+	if hasattr(doc, "company") and doc.company:
+		return doc.company
+	if hasattr(doc, "property") and doc.property:
+		return frappe.db.get_value("Property", doc.property, "company")
+	return None

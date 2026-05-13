@@ -1,3 +1,4 @@
+import frappe
 from frappe.model.document import Document
 
 class GuestInvoice(Document):
@@ -15,4 +16,12 @@ class GuestInvoice(Document):
         self.balance = self.total_amount - (self.amount_paid or 0)
 
     def on_submit(self):
-        self.db_set("status", "Submitted")
+        from hospitality_erp.finance.utils import make_gl_entries
+        
+        # Determine accounts (Usually configurable, using defaults for demo)
+        company = frappe.db.get_value("Property", self.property, "company")
+        receivable_account = frappe.db.get_value("Company", company, "default_receivable_account") or f"Debtors - {company}"
+        income_account = frappe.db.get_value("Company", company, "default_income_account") or f"Sales - {company}"
+        
+        make_gl_entries(self, receivable_account, income_account, self.total_amount)
+        self.db_set("status", "Paid" if self.balance <= 0 else "Submitted")
