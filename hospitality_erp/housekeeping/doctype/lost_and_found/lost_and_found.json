@@ -24,6 +24,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "LNF-.YYYY.-",
+   "default": "LNF-.YYYY.-",
    "reqd": 1
   },
   {

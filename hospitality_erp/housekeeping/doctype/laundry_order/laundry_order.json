@@ -25,6 +25,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "LAU-.YYYY.-",
+   "default": "LAU-.YYYY.-",
    "reqd": 1
   },
   {

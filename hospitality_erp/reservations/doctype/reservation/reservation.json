@@ -43,6 +43,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "RES-.YYYY.-",
+   "default": "RES-.YYYY.-",
    "reqd": 1
   },
   {
