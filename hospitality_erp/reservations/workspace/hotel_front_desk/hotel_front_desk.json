@@ -13,17 +13,19 @@
  "is_hidden": 0,
  "label": "Hotel Front Desk",
  "links": [
-  { "hidden": 0, "idx": 1,  "is_query_report": 0, "label": "Reservations",    "link_count": 0, "onboard": 1, "type": "Card Break" },
-  { "hidden": 0, "idx": 2,  "is_query_report": 0, "label": "Room Booking",    "link_count": 0, "link_to": "Room Booking",     "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
-  { "hidden": 0, "idx": 3,  "is_query_report": 0, "label": "Guest Database",  "link_count": 0, "link_to": "Guest",            "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
-
-  { "hidden": 0, "idx": 4,  "is_query_report": 0, "label": "Front Desk",      "link_count": 0, "onboard": 1, "type": "Card Break" },
-  { "hidden": 0, "idx": 5,  "is_query_report": 0, "label": "Check-In",        "link_count": 0, "link_to": "Check In",         "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
-  { "hidden": 0, "idx": 6,  "is_query_report": 0, "label": "Check-Out",       "link_count": 0, "link_to": "Check Out",        "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
-  { "hidden": 0, "idx": 7,  "is_query_report": 0, "label": "Guest Folio",     "link_count": 0, "link_to": "Guest Folio",      "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
-
-  { "hidden": 0, "idx": 8,  "is_query_report": 0, "label": "Housekeeping",    "link_count": 0, "onboard": 0, "type": "Card Break" },
-  { "hidden": 0, "idx": 9,  "is_query_report": 0, "label": "Housekeeping Log","link_count": 0, "link_to": "Housekeeping Log", "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
+   { "hidden": 0, "idx": 1,  "is_query_report": 0, "label": "Reservations",    "link_count": 0, "onboard": 1, "type": "Card Break" },
+   { "hidden": 0, "idx": 2,  "is_query_report": 0, "label": "Room Booking",    "link_count": 0, "link_to": "Reservation",      "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 3,  "is_query_report": 0, "label": "Guest Database",  "link_count": 0, "link_to": "Guest Profile",    "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 4,  "is_query_report": 0, "label": "Front Desk",      "link_count": 0, "onboard": 1, "type": "Card Break" },
+   { "hidden": 0, "idx": 5,  "is_query_report": 0, "label": "Check-In",        "link_count": 0, "link_to": "Check In",         "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 6,  "is_query_report": 0, "label": "Check-Out",       "link_count": 0, "link_to": "Check Out",        "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 7,  "is_query_report": 0, "label": "Guest Folio",     "link_count": 0, "link_to": "Guest Folio",      "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 8,  "is_query_report": 0, "label": "Night Audit",     "link_count": 0, "link_to": "Night Audit",      "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 9,  "is_query_report": 0, "label": "Rate Plan",       "link_count": 0, "link_to": "Rate Plan",        "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 10, "is_query_report": 0, "label": "Reports",         "link_count": 0, "onboard": 0, "type": "Card Break" },
+   { "hidden": 0, "idx": 11, "is_query_report": 1, "label": "Daily Occupancy", "link_count": 0, "link_to": "Daily Occupancy Report", "link_type": "Report", "onboard": 0, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 12, "is_query_report": 1, "label": "Arrival/Departure","link_count": 0, "link_to": "Arrival Departure List", "link_type": "Report", "onboard": 0, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 13, "is_query_report": 1, "label": "In-House Guests", "link_count": 0, "link_to": "In House Guest List", "link_type": "Report", "onboard": 0, "type": "Link", "dependencies": "" }
  ],
  "modified": "2024-05-12 12:00:00.000000",
  "modified_by": "Administrator",

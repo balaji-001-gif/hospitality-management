@@ -13,12 +13,13 @@
  "is_hidden": 0,
  "label": "Gym & Fitness Center",
  "links": [
-  { "hidden": 0, "idx": 1, "is_query_report": 0, "label": "Activities",         "link_count": 0, "onboard": 1, "type": "Card Break" },
-  { "hidden": 0, "idx": 2, "is_query_report": 0, "label": "Memberships",        "link_count": 0, "link_to": "Membership",          "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
-  { "hidden": 0, "idx": 3, "is_query_report": 0, "label": "Classes/Activities", "link_count": 0, "link_to": "Recreation Activity", "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
-
-  { "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Setup",              "link_count": 0, "onboard": 0, "type": "Card Break" },
-  { "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Sports Complex",     "link_count": 0, "link_to": "Sports Complex",      "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
+   { "hidden": 0, "idx": 1, "is_query_report": 0, "label": "Activities",         "link_count": 0, "onboard": 1, "type": "Card Break" },
+   { "hidden": 0, "idx": 2, "is_query_report": 0, "label": "Memberships",        "link_count": 0, "link_to": "Leisure Membership",  "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 3, "is_query_report": 0, "label": "Fitness Classes",    "link_count": 0, "link_to": "Fitness Class",       "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Class Bookings",     "link_count": 0, "link_to": "Class Booking",       "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Setup",              "link_count": 0, "onboard": 0, "type": "Card Break" },
+   { "hidden": 0, "idx": 6, "is_query_report": 0, "label": "Membership Plan",    "link_count": 0, "link_to": "Membership Plan",     "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 7, "is_query_report": 0, "label": "Facilities",         "link_count": 0, "link_to": "Facility",            "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
  ],
  "modified": "2024-05-12 12:15:00.000000",
  "modified_by": "Administrator",

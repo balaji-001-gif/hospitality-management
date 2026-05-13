@@ -13,12 +13,14 @@
  "is_hidden": 0,
  "label": "Events & Banquet Control",
  "links": [
-  { "hidden": 0, "idx": 1, "is_query_report": 0, "label": "Planning",       "link_count": 0, "onboard": 1, "type": "Card Break" },
-  { "hidden": 0, "idx": 2, "is_query_report": 0, "label": "Events",         "link_count": 0, "link_to": "Event",            "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
-  { "hidden": 0, "idx": 3, "is_query_report": 0, "label": "Venue Bookings", "link_count": 0, "link_to": "Facility Booking", "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 1, "is_query_report": 0, "label": "Planning",       "link_count": 0, "onboard": 1, "type": "Card Break" },
+   { "hidden": 0, "idx": 2, "is_query_report": 0, "label": "Event Bookings", "link_count": 0, "link_to": "Event Booking",  "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 3, "is_query_report": 0, "label": "Catering Orders", "link_count": 0, "link_to": "Catering Order", "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
 
-  { "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Setup",          "link_count": 0, "onboard": 0, "type": "Card Break" },
-  { "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Banquet Hall",   "link_count": 0, "link_to": "Banquet Hall",     "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
+   { "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Setup",          "link_count": 0, "onboard": 0, "type": "Card Break" },
+   { "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Event Venue",    "link_count": 0, "link_to": "Event Venue",     "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 6, "is_query_report": 0, "label": "Event Package",  "link_count": 0, "link_to": "Event Package",   "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+   { "hidden": 0, "idx": 7, "is_query_report": 0, "label": "Banquet Hall",   "link_count": 0, "link_to": "Banquet Hall",     "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
  ],
  "modified": "2024-05-12 12:25:00.000000",
  "modified_by": "Administrator",

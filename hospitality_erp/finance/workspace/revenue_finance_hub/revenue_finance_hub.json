@@ -18,9 +18,9 @@
   { "hidden": 0, "idx": 3, "is_query_report": 0, "label": "Invoices",        "link_count": 0, "link_to": "Sales Invoice",  "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
   { "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Night Audit",     "link_count": 0, "link_to": "Night Audit",    "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
   { "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Payment Receipt", "link_count": 0, "link_to": "Payment Receipt","link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
-
   { "hidden": 0, "idx": 6, "is_query_report": 0, "label": "Reports",         "link_count": 0, "onboard": 0, "type": "Card Break" },
-  { "hidden": 0, "idx": 7, "is_query_report": 1, "label": "Revenue Summary", "link_count": 0, "link_to": "Revenue Summary","link_type": "Report",  "onboard": 0, "type": "Link", "dependencies": "" }
+  { "hidden": 0, "idx": 7, "is_query_report": 1, "label": "Revenue Summary", "link_count": 0, "link_to": "Revenue Summary","link_type": "Report",  "onboard": 0, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 8, "is_query_report": 1, "label": "Night Audit Sum", "link_count": 0, "link_to": "Night Audit Summary", "link_type": "Report",  "onboard": 0, "type": "Link", "dependencies": "" }
  ],
  "modified": "2024-05-12 12:30:00.000000",
  "modified_by": "Administrator",

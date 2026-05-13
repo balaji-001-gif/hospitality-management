@@ -20,7 +20,11 @@
   { "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Setup",                "link_count": 0, "onboard": 1, "type": "Card Break" },
   { "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Restaurant Table",     "link_count": 0, "link_to": "Restaurant Table",     "link_type": "DocType", "onboard": 1, "type": "Link", "dependencies": "" },
   { "hidden": 0, "idx": 6, "is_query_report": 0, "label": "Menu Item",            "link_count": 0, "link_to": "Menu Item",            "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
-  { "hidden": 0, "idx": 7, "is_query_report": 0, "label": "Outlet",               "link_count": 0, "link_to": "Outlet",               "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
+  { "hidden": 0, "idx": 7, "is_query_report": 0, "label": "Outlet",               "link_count": 0, "link_to": "Outlet",               "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 8, "is_query_report": 0, "label": "Recipe",               "link_count": 0, "link_to": "Recipe",               "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+
+  { "hidden": 0, "idx": 9,  "is_query_report": 0, "label": "Reports",             "link_count": 0, "onboard": 0, "type": "Card Break" },
+  { "hidden": 0, "idx": 10, "is_query_report": 1, "label": "Daily F&B Sales",     "link_count": 0, "link_to": "Daily FB Sales Report", "link_type": "Report", "onboard": 0, "type": "Link", "dependencies": "" }
  ],
  "modified": "2024-05-12 12:05:00.000000",
  "modified_by": "Administrator",

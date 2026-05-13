@@ -19,7 +19,10 @@
   { "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Therapist Schedule",  "link_count": 0, "link_to": "Therapist Schedule", "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
 
   { "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Setup",               "link_count": 0, "onboard": 0, "type": "Card Break" },
-  { "hidden": 0, "idx": 6, "is_query_report": 0, "label": "Spa Service",         "link_count": 0, "link_to": "Spa Service",        "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
+  { "hidden": 0, "idx": 6, "is_query_report": 0, "label": "Spa Service",         "link_count": 0, "link_to": "Spa Service",        "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 7, "is_query_report": 0, "label": "Spa Room",            "link_count": 0, "link_to": "Spa Room",           "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 8, "is_query_report": 0, "label": "Gift Voucher",        "link_count": 0, "link_to": "Gift Voucher",       "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" },
+  { "hidden": 0, "idx": 9, "is_query_report": 0, "label": "Treatment Package",   "link_count": 0, "link_to": "Treatment Package",  "link_type": "DocType", "onboard": 0, "type": "Link", "dependencies": "" }
  ],
  "modified": "2024-05-12 12:10:00.000000",
  "modified_by": "Administrator",
