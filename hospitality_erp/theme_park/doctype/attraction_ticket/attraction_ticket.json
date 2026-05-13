@@ -26,7 +26,7 @@
    "fieldname": "guest",
    "fieldtype": "Link",
    "label": "Guest",
-   "options": "Guest",
+   "options": "Guest Profile",
    "reqd": 1
   },
   {

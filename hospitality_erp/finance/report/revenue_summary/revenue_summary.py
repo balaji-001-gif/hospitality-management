@@ -26,7 +26,7 @@ def get_columns():
 			"label": _("Guest"),
 			"fieldname": "guest",
 			"fieldtype": "Link",
-			"options": "Guest",
+			"options": "Guest Profile",
 			"width": 150
 		},
 		{
