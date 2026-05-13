@@ -7,14 +7,26 @@ def run():
 	setup_demo_data()
 
 def setup_demo_data():
-	# Ensure Lost and Found has the correct module set in the database
+	# 0. Self-healing for Lost and Found (Force module alignment)
+	if not frappe.db.exists("Module Def", "Housekeeping"):
+		frappe.get_doc({
+			"doctype": "Module Def",
+			"module_name": "Housekeeping",
+			"app_name": "hospitality_erp"
+		}).insert(ignore_permissions=True)
+		frappe.db.commit()
+
 	if frappe.db.exists("DocType", "Lost and Found"):
-		current_module = frappe.db.get_value("DocType", "Lost and Found", "module")
-		if current_module != "Housekeeping":
-			frappe.db.set_value("DocType", "Lost and Found", "module", "Housekeeping")
-			frappe.db.commit()
-			frappe.clear_cache(doctype="Lost and Found")
-			frappe.logger().info("Corrected module for Lost and Found to Housekeeping")
+		frappe.db.sql("""
+			UPDATE `tabDocType` 
+			SET module = 'Housekeeping', custom = 0 
+			WHERE name = 'Lost and Found'
+		""")
+		frappe.db.commit()
+		# Clear all related caches
+		frappe.clear_cache(doctype="Lost and Found")
+		frappe.cache().delete_value("doctype_module:Lost and Found")
+		frappe.logger().info("Forced module for Lost and Found to Housekeeping via direct SQL")
 
 	frappe.logger().info("Setting up Global Hospitality & Leisure Demo Data...")
 	
