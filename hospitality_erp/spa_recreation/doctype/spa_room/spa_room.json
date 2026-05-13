@@ -7,8 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "therapist_name",
-  "specialization",
+  "room_name",
+  "property",
   "status"
  ],
  "fields": [
@@ -16,33 +16,35 @@
    "fieldname": "naming_series",
    "fieldtype": "Series",
    "label": "Series",
-   "options": "THR-.YYYY.-",
+   "options": "SPA-.YYYY.-",
    "reqd": 1,
-   "default": "THR-.YYYY.-"
+   "default": "SPA-.YYYY.-"
   },
   {
-   "fieldname": "therapist_name",
+   "fieldname": "room_name",
    "fieldtype": "Data",
-   "label": "Therapist Name",
+   "label": "Room Name",
    "reqd": 1
   },
   {
-   "fieldname": "specialization",
-   "fieldtype": "Small Text",
-   "label": "Specialization"
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Active\nInactive",
-   "default": "Active"
+   "options": "Available\nOccupied\nMaintenance",
+   "default": "Available"
   }
  ],
  "modified": "2024-05-13 12:35:00.000000",
  "modified_by": "Administrator",
  "module": "Spa & Recreation",
- "name": "Therapist",
+ "name": "Spa Room",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

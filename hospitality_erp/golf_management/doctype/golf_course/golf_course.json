@@ -2,47 +2,54 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2024-05-13 12:35:00.000000",
+ "creation": "2024-05-13 12:30:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "therapist_name",
-  "specialization",
-  "status"
+  "course_name",
+  "property",
+  "holes",
+  "par"
  ],
  "fields": [
   {
    "fieldname": "naming_series",
    "fieldtype": "Series",
    "label": "Series",
-   "options": "THR-.YYYY.-",
+   "options": "GOLF-.YYYY.-",
    "reqd": 1,
-   "default": "THR-.YYYY.-"
+   "default": "GOLF-.YYYY.-"
   },
   {
-   "fieldname": "therapist_name",
+   "fieldname": "course_name",
    "fieldtype": "Data",
-   "label": "Therapist Name",
+   "label": "Course Name",
    "reqd": 1
   },
   {
-   "fieldname": "specialization",
-   "fieldtype": "Small Text",
-   "label": "Specialization"
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Active\nInactive",
-   "default": "Active"
+   "fieldname": "holes",
+   "fieldtype": "Int",
+   "label": "Number of Holes",
+   "default": "18"
+  },
+  {
+   "fieldname": "par",
+   "fieldtype": "Int",
+   "label": "Par"
   }
  ],
- "modified": "2024-05-13 12:35:00.000000",
+ "modified": "2024-05-13 12:30:00.000000",
  "modified_by": "Administrator",
- "module": "Spa & Recreation",
- "name": "Therapist",
+ "module": "Golf Management",
+ "name": "Golf Course",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

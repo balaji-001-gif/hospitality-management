@@ -2,13 +2,14 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2024-05-13 12:35:00.000000",
+ "creation": "2024-05-13 12:30:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "therapist_name",
-  "specialization",
+  "pitch_number",
+  "property",
+  "pitch_type",
   "status"
  ],
  "fields": [
@@ -16,33 +17,42 @@
    "fieldname": "naming_series",
    "fieldtype": "Series",
    "label": "Series",
-   "options": "THR-.YYYY.-",
+   "options": "CP-.YYYY.-",
    "reqd": 1,
-   "default": "THR-.YYYY.-"
+   "default": "CP-.YYYY.-"
   },
   {
-   "fieldname": "therapist_name",
+   "fieldname": "pitch_number",
    "fieldtype": "Data",
-   "label": "Therapist Name",
+   "label": "Pitch Number",
    "reqd": 1
   },
   {
-   "fieldname": "specialization",
-   "fieldtype": "Small Text",
-   "label": "Specialization"
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pitch_type",
+   "fieldtype": "Select",
+   "label": "Pitch Type",
+   "options": "Tent\nCaravan\nMotorhome\nGlamping Pod",
+   "reqd": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Active\nInactive",
-   "default": "Active"
+   "options": "Available\nOccupied\nMaintenance",
+   "default": "Available"
   }
  ],
- "modified": "2024-05-13 12:35:00.000000",
+ "modified": "2024-05-13 12:30:00.000000",
  "modified_by": "Administrator",
- "module": "Spa & Recreation",
- "name": "Therapist",
+ "module": "Campsite Management",
+ "name": "Campsite Pitch",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

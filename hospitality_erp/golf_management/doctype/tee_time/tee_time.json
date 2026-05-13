@@ -2,13 +2,15 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2024-05-13 12:35:00.000000",
+ "creation": "2024-05-13 12:30:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "therapist_name",
-  "specialization",
+  "guest",
+  "course",
+  "date",
+  "time",
   "status"
  ],
  "fields": [
@@ -16,33 +18,48 @@
    "fieldname": "naming_series",
    "fieldtype": "Series",
    "label": "Series",
-   "options": "THR-.YYYY.-",
+   "options": "TEE-.YYYY.-",
    "reqd": 1,
-   "default": "THR-.YYYY.-"
+   "default": "TEE-.YYYY.-"
   },
   {
-   "fieldname": "therapist_name",
-   "fieldtype": "Data",
-   "label": "Therapist Name",
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "label": "Guest",
+   "options": "Guest Profile",
    "reqd": 1
   },
   {
-   "fieldname": "specialization",
-   "fieldtype": "Small Text",
-   "label": "Specialization"
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Golf Course",
+   "options": "Golf Course",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "reqd": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Active\nInactive",
-   "default": "Active"
+   "options": "Booked\nChecked In\nCancelled",
+   "default": "Booked"
   }
  ],
- "modified": "2024-05-13 12:35:00.000000",
+ "modified": "2024-05-13 12:30:00.000000",
  "modified_by": "Administrator",
- "module": "Spa & Recreation",
- "name": "Therapist",
+ "module": "Golf Management",
+ "name": "Tee Time",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
