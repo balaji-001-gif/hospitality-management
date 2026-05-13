@@ -1,263 +1,252 @@
 {
-  "actions": [],
-  "autoname": "naming_series:",
-  "is_submittable": 1,
-  "creation": "2024-01-01 00:00:00.000000",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "naming_series",
-    "guest",
-    "property",
-    "status",
-    "section_break_1",
-    "room_type",
-    "room",
-    "meal_plan",
-    "column_break_1",
-    "check_in_date",
-    "check_out_date",
-    "nights",
-    "section_break_2",
-    "rate_plan",
-    "rate_category",
-    "channel",
-    "rate_per_night",
-    "column_break_2",
-    "total_amount",
-    "advance_paid",
-    "balance_due",
-    "section_break_3",
-    "adults",
-    "children",
-    "special_requests",
-    "section_break_4",
-    "confirmation_number",
-    "source_reference",
-    "amended_from"
-  ],
-  "fields": [
-    {
-      "fieldname": "naming_series",
-      "fieldtype": "Series",
-      "label": "Series",
-      "options": "RES-.YYYY.-"
-    },
-    {
-      "fieldname": "guest",
-      "fieldtype": "Link",
-      "label": "Guest",
-      "options": "Guest Profile",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "property",
-      "fieldtype": "Link",
-      "label": "Property",
-      "options": "Property",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "label": "Status",
-      "options": "\nConfirmed\nChecked In\nChecked Out\nCancelled\nNo Show",
-      "default": "Confirmed",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "section_break_1",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "room_type",
-      "fieldtype": "Link",
-      "label": "Room Type",
-      "options": "Room Type"
-    },
-    {
-      "fieldname": "room",
-      "fieldtype": "Link",
-      "label": "Room",
-      "options": "Room"
-    },
-    {
-      "fieldname": "meal_plan",
-      "fieldtype": "Link",
-      "label": "Meal Plan",
-      "options": "Meal Plan"
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "check_in_date",
-      "fieldtype": "Date",
-      "label": "Check-In Date",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "check_out_date",
-      "fieldtype": "Date",
-      "label": "Check-Out Date",
-      "reqd": 1,
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "nights",
-      "fieldtype": "Int",
-      "label": "Nights",
-      "read_only": 1
-    },
-    {
-      "fieldname": "section_break_2",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "rate_plan",
-      "fieldtype": "Link",
-      "label": "Rate Plan",
-      "options": "Rate Plan"
-    },
-    {
-      "fieldname": "rate_category",
-      "fieldtype": "Link",
-      "label": "Rate Category",
-      "options": "Rate Category"
-    },
-    {
-      "fieldname": "channel",
-      "fieldtype": "Link",
-      "label": "Channel",
-      "options": "Channel"
-    },
-    {
-      "fieldname": "rate_per_night",
-      "fieldtype": "Currency",
-      "label": "Rate Per Night"
-    },
-    {
-      "fieldname": "column_break_2",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "total_amount",
-      "fieldtype": "Currency",
-      "label": "Total Amount",
-      "read_only": 1
-    },
-    {
-      "fieldname": "advance_paid",
-      "fieldtype": "Currency",
-      "label": "Advance Paid"
-    },
-    {
-      "fieldname": "balance_due",
-      "fieldtype": "Currency",
-      "label": "Balance Due",
-      "read_only": 1
-    },
-    {
-      "fieldname": "section_break_3",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "adults",
-      "fieldtype": "Int",
-      "label": "Adults",
-      "default": "1"
-    },
-    {
-      "fieldname": "children",
-      "fieldtype": "Int",
-      "label": "Children",
-      "default": "0"
-    },
-    {
-      "fieldname": "special_requests",
-      "fieldtype": "Text",
-      "label": "Special Requests"
-    },
-    {
-      "fieldname": "section_break_4",
-      "fieldtype": "Section Break"
-    },
-    {
-      "fieldname": "confirmation_number",
-      "fieldtype": "Data",
-      "label": "Confirmation Number"
-    },
-    {
-      "fieldname": "source_reference",
-      "fieldtype": "Data",
-      "label": "Source Reference"
-    },
-    {
-      "fieldname": "amended_from",
-      "fieldtype": "Link",
-      "label": "Amended From",
-      "no_copy": 1,
-      "options": "Reservation",
-      "read_only": 1
-    }
-  ],
-  "links": [],
-  "modified": "2024-01-01 00:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Reservations",
-  "name": "Reservation",
-  "naming_rule": "By \"Naming Series\" field",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "submit": 1,
-      "cancel": 1,
-      "amend": 1,
-      "write": 1
-    },
-    {
-      "create": 1,
-      "read": 1,
-      "report": 1,
-      "role": "All",
-      "write": 1
-    }
-  ],
-  "states": [
-    {
-      "color": "Blue",
-      "title": "Confirmed"
-    },
-    {
-      "color": "Green",
-      "title": "Checked In"
-    },
-    {
-      "color": "Gray",
-      "title": "Checked Out"
-    },
-    {
-      "color": "Red",
-      "title": "Cancelled"
-    },
-    {
-      "color": "Orange",
-      "title": "No Show"
-    }
-  ],
-  "title_field": "guest",
-  "track_changes": 1
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "guest",
+  "property",
+  "status",
+  "section_break_1",
+  "room_type",
+  "room",
+  "meal_plan",
+  "column_break_1",
+  "check_in_date",
+  "check_out_date",
+  "nights",
+  "section_break_2",
+  "rate_plan",
+  "rate_category",
+  "channel",
+  "rate_per_night",
+  "column_break_2",
+  "total_amount",
+  "advance_paid",
+  "balance_due",
+  "section_break_3",
+  "adults",
+  "children",
+  "special_requests",
+  "section_break_4",
+  "confirmation_number",
+  "source_reference",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "RES-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Guest",
+   "options": "Guest Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nConfirmed\nChecked In\nChecked Out\nCancelled\nNo Show"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "label": "Room Type",
+   "options": "Room Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "Room"
+  },
+  {
+   "fieldname": "meal_plan",
+   "fieldtype": "Link",
+   "label": "Meal Plan",
+   "options": "Meal Plan"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "check_in_date",
+   "fieldtype": "Date",
+   "label": "Check-In Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_out_date",
+   "fieldtype": "Date",
+   "label": "Check-Out Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nights",
+   "fieldtype": "Int",
+   "label": "Nights",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate_plan",
+   "fieldtype": "Link",
+   "label": "Rate Plan",
+   "options": "Rate Plan"
+  },
+  {
+   "fieldname": "rate_category",
+   "fieldtype": "Link",
+   "label": "Rate Category",
+   "options": "Rate Category"
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Link",
+   "label": "Channel",
+   "options": "Channel"
+  },
+  {
+   "fieldname": "rate_per_night",
+   "fieldtype": "Currency",
+   "label": "Rate Per Night"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_paid",
+   "fieldtype": "Currency",
+   "label": "Advance Paid"
+  },
+  {
+   "fieldname": "balance_due",
+   "fieldtype": "Currency",
+   "label": "Balance Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "adults",
+   "fieldtype": "Int",
+   "label": "Adults"
+  },
+  {
+   "default": "0",
+   "fieldname": "children",
+   "fieldtype": "Int",
+   "label": "Children"
+  },
+  {
+   "fieldname": "special_requests",
+   "fieldtype": "Text",
+   "label": "Special Requests"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "confirmation_number",
+   "fieldtype": "Data",
+   "label": "Confirmation Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_reference",
+   "fieldtype": "Data",
+   "label": "Source Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Reservation",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Reservations",
+ "name": "Reservation",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "guest",
+ "track_changes": 1
 }
