@@ -28,7 +28,9 @@
       "fieldname": "naming_series",
       "fieldtype": "Series",
       "label": "Series",
-      "options": "FOLIO-.YYYY.-"
+      "options": "FOLIO-.YYYY.-",
+      "default": "FOLIO-.YYYY.-",
+      "reqd": 1
     },
     {
       "fieldname": "guest",
