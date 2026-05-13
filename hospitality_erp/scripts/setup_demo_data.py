@@ -7,6 +7,15 @@ def run():
 	setup_demo_data()
 
 def setup_demo_data():
+	# Ensure Lost and Found has the correct module set in the database
+	if frappe.db.exists("DocType", "Lost and Found"):
+		current_module = frappe.db.get_value("DocType", "Lost and Found", "module")
+		if current_module != "Housekeeping":
+			frappe.db.set_value("DocType", "Lost and Found", "module", "Housekeeping")
+			frappe.db.commit()
+			frappe.clear_cache(doctype="Lost and Found")
+			frappe.logger().info("Corrected module for Lost and Found to Housekeeping")
+
 	frappe.logger().info("Setting up Global Hospitality & Leisure Demo Data...")
 	
 	try:
