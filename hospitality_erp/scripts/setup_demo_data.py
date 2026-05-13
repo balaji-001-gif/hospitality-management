@@ -1,5 +1,5 @@
 import frappe
-from frappe.utils import today, add_days, getdate
+from frappe.utils import today, add_days, getdate, now
 import random
 
 def run():
@@ -7,27 +7,6 @@ def run():
 	setup_demo_data()
 
 def setup_demo_data():
-	# 0. Self-healing for Lost and Found (Force module alignment)
-	if not frappe.db.exists("Module Def", "Housekeeping"):
-		frappe.get_doc({
-			"doctype": "Module Def",
-			"module_name": "Housekeeping",
-			"app_name": "hospitality_erp"
-		}).insert(ignore_permissions=True)
-		frappe.db.commit()
-
-	if frappe.db.exists("DocType", "Lost and Found"):
-		frappe.db.sql("""
-			UPDATE `tabDocType` 
-			SET module = 'Housekeeping', custom = 0 
-			WHERE name = 'Lost and Found'
-		""")
-		frappe.db.commit()
-		# Clear all related caches
-		frappe.clear_cache(doctype="Lost and Found")
-		frappe.cache().delete_value("doctype_module:Lost and Found")
-		frappe.logger().info("Forced module for Lost and Found to Housekeeping via direct SQL")
-
 	frappe.logger().info("Setting up Global Hospitality & Leisure Demo Data...")
 	
 	try:
@@ -61,9 +40,9 @@ def setup_demo_data():
 				properties.append(frappe.db.get_value("Property", {"property_name": name}))
 
 		# 3. Room Types & Rooms (10 per property)
-		room_types_list = ["Single", "Double", "Twin", "King", "Penthouse"]
 		rooms = []
 		room_types = []
+		room_types_list = ["Single", "Double", "Twin", "King", "Penthouse"]
 		for prop in properties:
 			created_rt = []
 			for rt_name in room_types_list:
@@ -152,10 +131,9 @@ def setup_demo_data():
 				menu_items.append(frappe.db.get_value("Menu Item", {"item_name": name}))
 
 		# 6. Reservations (10 entries)
-		reservations = []
 		for i in range(1, 11):
 			check_in = add_days(today(), random.randint(-5, 5))
-			res = frappe.get_doc({
+			frappe.get_doc({
 				"doctype": "Reservation",
 				"naming_series": "RES-.YYYY.-",
 				"guest": random.choice(guests),
@@ -166,7 +144,6 @@ def setup_demo_data():
 				"status": "Confirmed",
 				"rate_per_night": random.randint(200, 1000)
 			}).insert(ignore_permissions=True)
-			reservations.append(res.name)
 
 		# 7. Laundry Orders (10 entries)
 		for i in range(1, 11):
@@ -181,23 +158,7 @@ def setup_demo_data():
 				"amount": random.randint(20, 150)
 			}).insert(ignore_permissions=True)
 
-		# 8. Lost and Found (5 entries)
-		frappe.logger().info("Setting up Lost and Found...")
-		for i in range(1, 6):
-			try:
-				frappe.get_doc({
-					"doctype": "Lost and Found",
-					"naming_series": "LNF-.YYYY.-",
-					"item_description": random.choice(["iPhone 13", "Leather Wallet", "Keycard", "Sunglasses", "Watch"]),
-					"property": random.choice(properties),
-					"status": "In Custody",
-					"found_date": today()
-				}).insert(ignore_permissions=True)
-			except Exception as e:
-				frappe.logger().error(f"Failed to insert Lost and Found: {str(e)}")
-				raise e
-
-		# 9. Maintenance Requests (10 entries)
+		# 8. Maintenance Requests (10 entries)
 		for i in range(1, 11):
 			frappe.get_doc({
 				"doctype": "Maintenance Request",
@@ -209,7 +170,7 @@ def setup_demo_data():
 				"status": "Open"
 			}).insert(ignore_permissions=True)
 
-		# 10. FnB Orders (10 entries)
+		# 9. FnB Orders (10 entries)
 		for i in range(1, 11):
 			order = frappe.get_doc({
 				"doctype": "FnB Order",
@@ -225,8 +186,170 @@ def setup_demo_data():
 				})
 			order.insert(ignore_permissions=True)
 
+		# 10. Spa & Recreation
+		therapists = []
+		for i in range(1, 6):
+			name = f"Therapist {i}"
+			if not frappe.db.exists("Therapist", {"full_name": name}):
+				therapist = frappe.get_doc({
+					"doctype": "Therapist",
+					"full_name": name,
+					"specialization": random.choice(["Massage", "Facial", "Yoga", "Aroma Therapy"]),
+					"status": "Available"
+				}).insert(ignore_permissions=True)
+				therapists.append(therapist.name)
+			else:
+				therapists.append(frappe.db.get_value("Therapist", {"full_name": name}))
+
+		spa_services = []
+		for i in range(1, 6):
+			name = f"Spa Treatment {i}"
+			if not frappe.db.exists("Spa Service", {"service_name": name}):
+				service = frappe.get_doc({
+					"doctype": "Spa Service",
+					"service_name": name,
+					"duration_minutes": random.choice([30, 60, 90]),
+					"rate": random.randint(50, 300)
+				}).insert(ignore_permissions=True)
+				spa_services.append(service.name)
+			else:
+				spa_services.append(frappe.db.get_value("Spa Service", {"service_name": name}))
+
+		for i in range(1, 11):
+			frappe.get_doc({
+				"doctype": "Spa Booking",
+				"naming_series": "SPA-.YYYY.-",
+				"guest": random.choice(guests),
+				"service": random.choice(spa_services),
+				"therapist": random.choice(therapists),
+				"booking_date": today(),
+				"status": "Confirmed"
+			}).insert(ignore_permissions=True)
+
+		# 11. Events
+		venues = []
+		for i in range(1, 6):
+			name = f"Event Venue {i}"
+			if not frappe.db.exists("Event Venue", {"venue_name": name}):
+				venue = frappe.get_doc({
+					"doctype": "Event Venue",
+					"venue_name": name,
+					"capacity": random.randint(50, 500),
+					"rate_per_hour": random.randint(100, 1000)
+				}).insert(ignore_permissions=True)
+				venues.append(venue.name)
+			else:
+				venues.append(frappe.db.get_value("Event Venue", {"venue_name": name}))
+
+		for i in range(1, 6):
+			frappe.get_doc({
+				"doctype": "Event Booking",
+				"naming_series": "EVT-.YYYY.-",
+				"customer_name": f"Event Customer {i}",
+				"venue": random.choice(venues),
+				"booking_date": today(),
+				"event_type": random.choice(["Wedding", "Conference", "Birthday", "Seminar"]),
+				"status": "Confirmed"
+			}).insert(ignore_permissions=True)
+
+		# 12. Membership & Fitness
+		membership_plans = ["Basic", "Silver", "Gold", "Platinum"]
+		for plan in membership_plans:
+			if not frappe.db.exists("Membership Plan", plan):
+				frappe.get_doc({
+					"doctype": "Membership Plan",
+					"plan_name": plan,
+					"monthly_rate": random.randint(50, 500)
+				}).insert(ignore_permissions=True)
+
+		for i in range(1, 6):
+			frappe.get_doc({
+				"doctype": "Leisure Membership",
+				"naming_series": "MEM-.YYYY.-",
+				"member_name": f"Member {i}",
+				"plan": random.choice(membership_plans),
+				"status": "Active",
+				"start_date": today()
+			}).insert(ignore_permissions=True)
+
+		# 13. Cinema & Entertainment
+		halls = []
+		for i in range(1, 4):
+			name = f"Cinema Hall {i}"
+			if not frappe.db.exists("Cinema Hall", {"hall_name": name}):
+				hall = frappe.get_doc({
+					"doctype": "Cinema Hall",
+					"hall_name": name,
+					"total_seats": random.randint(50, 200)
+				}).insert(ignore_permissions=True)
+				halls.append(hall.name)
+			else:
+				halls.append(frappe.db.get_value("Cinema Hall", {"hall_name": name}))
+
+		for i in range(1, 6):
+			frappe.get_doc({
+				"doctype": "Movie Show",
+				"movie_name": f"Blockbuster Movie {i}",
+				"cinema_hall": random.choice(halls),
+				"show_time": now(),
+				"ticket_price": random.randint(10, 50)
+			}).insert(ignore_permissions=True)
+
+		# 14. Theme Park
+		for i in range(1, 6):
+			name = f"Attraction {i}"
+			if not frappe.db.exists("Theme Park Attraction", {"attraction_name": name}):
+				frappe.get_doc({
+					"doctype": "Theme Park Attraction",
+					"attraction_name": name,
+					"type": random.choice(["Roller Coaster", "Water Slide", "Dark Ride", "Show"]),
+					"status": "Operational"
+				}).insert(ignore_permissions=True)
+
+		for i in range(1, 6):
+			frappe.get_doc({
+				"doctype": "Attraction Ticket",
+				"naming_series": "TKT-.YYYY.-",
+				"visitor_name": f"Visitor {i}",
+				"ticket_type": random.choice(["Adult", "Child", "Senior", "VIP"]),
+				"price": random.randint(30, 150),
+				"status": "Issued"
+			}).insert(ignore_permissions=True)
+
+		# 15. Security & Visitor Log
+		for i in range(1, 11):
+			frappe.get_doc({
+				"doctype": "Visitor Log",
+				"visitor_name": f"Visitor {i}",
+				"purpose_of_visit": random.choice(["Guest", "Delivery", "Contractor", "Maintenance"]),
+				"check_in_time": now(),
+				"status": "Checked In"
+			}).insert(ignore_permissions=True)
+
+		# 16. Sustainability Log
+		for i in range(1, 6):
+			frappe.get_doc({
+				"doctype": "Sustainability Log",
+				"property": random.choice(properties),
+				"energy_usage_kwh": random.randint(100, 1000),
+				"water_usage_liters": random.randint(500, 5000),
+				"waste_recycled_kg": random.randint(10, 100),
+				"log_date": today()
+			}).insert(ignore_permissions=True)
+
+		# 17. HR & Staffing
+		for i in range(1, 11):
+			frappe.get_doc({
+				"doctype": "Staff Shift",
+				"staff_name": f"Employee {i}",
+				"shift_type": random.choice(["Morning", "Afternoon", "Night"]),
+				"start_time": "08:00:00",
+				"end_time": "16:00:00",
+				"date": today()
+			}).insert(ignore_permissions=True)
+
 		frappe.db.commit()
-		print("Hyper-comprehensive global demo data setup completed successfully!")
+		print("Global Hospitality & Leisure demo data setup completed successfully!")
 
 	except Exception as e:
 		frappe.db.rollback()
@@ -234,4 +357,4 @@ def setup_demo_data():
 		print(f"Error setting up demo data: {str(e)}")
 
 if __name__ == "__main__":
-	run()
+	setup_demo_data()
