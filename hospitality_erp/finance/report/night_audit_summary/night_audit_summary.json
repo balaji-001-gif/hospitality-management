@@ -1,0 +1,34 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2024-05-13 12:00:00.000000",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "mandatory": 0,
+   "options": "Property"
+  },
+  {
+   "default": "Today",
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "label": "Audit Date",
+   "mandatory": 1
+  }
+ ],
+ "is_standard": "Yes",
+ "modified": "2024-05-13 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Finance",
+ "name": "Night Audit Summary",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Night Audit",
+ "report_name": "Night Audit Summary",
+ "report_type": "Script Report"
+}

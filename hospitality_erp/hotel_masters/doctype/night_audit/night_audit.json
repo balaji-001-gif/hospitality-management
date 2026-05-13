@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-13 12:15:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "property",
+  "audit_date",
+  "status",
+  "section_break_1",
+  "total_rooms_occupied",
+  "total_rooms_available",
+  "occupancy_rate",
+  "column_break_1",
+  "room_revenue",
+  "fb_revenue",
+  "other_revenue",
+  "total_revenue",
+  "section_break_2",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "NA-.YYYY.-",
+   "reqd": 1,
+   "default": "NA-.YYYY.-"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "label": "Audit Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Statistics"
+  },
+  {
+   "fieldname": "total_rooms_occupied",
+   "fieldtype": "Int",
+   "label": "Rooms Occupied",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_rooms_available",
+   "fieldtype": "Int",
+   "label": "Total Rooms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "occupancy_rate",
+   "fieldtype": "Percent",
+   "label": "Occupancy Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_revenue",
+   "fieldtype": "Currency",
+   "label": "Room Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fb_revenue",
+   "fieldtype": "Currency",
+   "label": "F&B Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "other_revenue",
+   "fieldtype": "Currency",
+   "label": "Other Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Night Audit",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2024-05-13 12:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Hotel Masters",
+ "name": "Night Audit",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  }
+ ],
+ "states": []
+}

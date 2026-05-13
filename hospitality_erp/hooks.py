@@ -26,6 +26,7 @@ doc_events = {
 
 scheduler_events = {
     "daily": [
+        "hospitality_erp.hotel_masters.doctype.night_audit.night_audit.run_night_audit",
         "hospitality_erp.reservations.utils.send_checkin_reminders",
         "hospitality_erp.reservations.utils.send_checkout_reminders",
         "hospitality_erp.finance.utils.flag_overdue_invoices",
