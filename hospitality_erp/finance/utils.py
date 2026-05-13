@@ -59,3 +59,27 @@ def flag_overdue_invoices():
 	
 	for inv in overdue_invoices:
 		frappe.db.set_value("Guest Invoice", inv.name, "status", "Overdue")
+
+def post_charge_to_folio(guest, amount, description, charge_type="Other"):
+	"""Helper to post a charge to an active guest folio."""
+	import frappe
+	from frappe.utils import today
+	
+	# Find active folio for guest
+	folio = frappe.db.get_value("Guest Folio", {"guest": guest, "status": "Open"}, "name")
+	
+	if not folio:
+		# Optionally create one or log
+		frappe.msgprint(f"No active folio found for guest {guest}. Charge {amount} for {description} was not posted.")
+		return
+	
+	folio_doc = frappe.get_doc("Guest Folio", folio)
+	folio_doc.append("charges", {
+		"posting_date": today(),
+		"description": description,
+		"charge_type": charge_type,
+		"quantity": 1,
+		"rate": amount,
+		"amount": amount
+	})
+	folio_doc.save(ignore_permissions=True)
