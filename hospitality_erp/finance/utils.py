@@ -46,3 +46,16 @@ def get_company(doc):
 	if hasattr(doc, "property") and doc.property:
 		return frappe.db.get_value("Property", doc.property, "company")
 	return None
+
+def flag_overdue_invoices():
+	"""Daily job to flag invoices that are past their due date."""
+	import frappe
+	from frappe.utils import today
+	
+	overdue_invoices = frappe.get_all("Guest Invoice", filters={
+		"status": ["in", ["Submitted", "Partially Paid"]],
+		"due_date": ["<", today()]
+	})
+	
+	for inv in overdue_invoices:
+		frappe.db.set_value("Guest Invoice", inv.name, "status", "Overdue")

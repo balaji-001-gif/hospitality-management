@@ -58,11 +58,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 11:15:00.000000",
+ "modified": "2026-05-13 11:46:15.994090",
  "modified_by": "Administrator",
  "module": "Theme Park",
  "name": "Attraction Ticket",
- "naming_rule": "By \"Naming Series\"",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
