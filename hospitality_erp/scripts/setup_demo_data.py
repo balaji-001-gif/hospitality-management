@@ -161,15 +161,20 @@ def setup_demo_data():
 			}).insert(ignore_permissions=True)
 
 		# 8. Lost and Found (5 entries)
+		frappe.logger().info("Setting up Lost and Found...")
 		for i in range(1, 6):
-			frappe.get_doc({
-				"doctype": "Lost and Found",
-				"naming_series": "LNF-.YYYY.-",
-				"item_description": random.choice(["iPhone 13", "Leather Wallet", "Keycard", "Sunglasses", "Watch"]),
-				"property": random.choice(properties),
-				"status": "In Custody",
-				"found_date": today()
-			}).insert(ignore_permissions=True)
+			try:
+				frappe.get_doc({
+					"doctype": "Lost and Found",
+					"naming_series": "LNF-.YYYY.-",
+					"item_description": random.choice(["iPhone 13", "Leather Wallet", "Keycard", "Sunglasses", "Watch"]),
+					"property": random.choice(properties),
+					"status": "In Custody",
+					"found_date": today()
+				}).insert(ignore_permissions=True)
+			except Exception as e:
+				frappe.logger().error(f"Failed to insert Lost and Found: {str(e)}")
+				raise e
 
 		# 9. Maintenance Requests (10 entries)
 		for i in range(1, 11):
