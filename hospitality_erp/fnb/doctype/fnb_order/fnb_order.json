@@ -20,7 +20,6 @@
   "tax_amount",
   "total_amount",
   "payment_mode",
-  "amended_from",
   "amended_from"
  ],
  "fields": [
@@ -103,14 +102,6 @@
    "fieldtype": "Select",
    "label": "Payment Mode",
    "options": "\nCash\nCard\nUPI\nCharge to Room"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "FnB Order",
-   "read_only": 1
   },
   {
    "fieldname": "amended_from",
