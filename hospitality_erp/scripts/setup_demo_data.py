@@ -150,7 +150,7 @@ def setup_demo_data():
 					"doctype": "Cruise Cabin",
 					"cabin_number": cabin_no,
 					"vessel_name": "Ocean Monarch",
-					"cabin_type": "Grand Suite",
+					"cabin_type": "Suite",
 					"deck_level": random.randint(5, 12),
 					"status": "Available"
 				}).insert(ignore_permissions=True)
