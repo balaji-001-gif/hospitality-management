@@ -41,6 +41,8 @@ def setup_demo_data():
 
 		# 3. Room Types & Rooms (10 per property)
 		room_types_list = ["Single", "Double", "Twin", "King", "Penthouse"]
+		rooms = []
+		room_types = []
 		for prop in properties:
 			created_rt = []
 			for rt_name in room_types_list:
@@ -56,17 +58,21 @@ def setup_demo_data():
 					created_rt.append(rt.name)
 				else:
 					created_rt.append(frappe.db.get_value("Room Type", {"type_name": rt_name, "property": prop}))
+			room_types.extend(created_rt)
 			
 			for i in range(1, 11):
 				room_no = f"{prop[:3].upper()}-{i:03d}"
 				if not frappe.db.exists("Room", {"room_number": room_no}):
-					frappe.get_doc({
+					room = frappe.get_doc({
 						"doctype": "Room",
 						"room_number": room_no,
 						"property": prop,
 						"room_type": random.choice(created_rt),
 						"status": "Vacant Clean"
 					}).insert(ignore_permissions=True)
+					rooms.append(room.name)
+				else:
+					rooms.append(frappe.db.get_value("Room", {"room_number": room_no}))
 
 		# 4. Guests (20 entries)
 		guests = []
@@ -84,7 +90,8 @@ def setup_demo_data():
 			else:
 				guests.append(frappe.db.get_value("Guest Profile", {"full_name": name}))
 
-		# 5. F&B (10 Outlets, 10 Tables each)
+		# 5. F&B (10 Outlets, 10 Tables, 10 Menu Items)
+		outlets = []
 		for i in range(1, 11):
 			name = f"Premium Outlet {i}"
 			if not frappe.db.exists("Outlet", {"outlet_name": name}):
@@ -93,6 +100,7 @@ def setup_demo_data():
 					"outlet_name": name,
 					"property": random.choice(properties)
 				}).insert(ignore_permissions=True)
+				outlets.append(outlet.name)
 				
 				for j in range(1, 11):
 					table_no = f"TAB-{i}-{j:02d}"
@@ -104,92 +112,92 @@ def setup_demo_data():
 							"capacity": random.choice([2, 4, 6, 8]),
 							"status": "Available"
 						}).insert(ignore_permissions=True)
+			else:
+				outlets.append(frappe.db.get_value("Outlet", {"outlet_name": name}))
 
-		# 6. Theme Parks (10 Attractions)
-		for i in range(1, 11):
-			name = f"Galaxy Adventure {i}"
-			if not frappe.db.exists("Theme Park Attraction", {"attraction_name": name}):
-				frappe.get_doc({
-					"doctype": "Theme Park Attraction",
-					"attraction_name": name,
-					"type": random.choice(["Ride", "Show", "Exhibit"]),
-					"status": "Open",
-					"capacity": random.randint(800, 3000)
-				}).insert(ignore_permissions=True)
-
-		# 7. Cinema (10 Halls)
-		for i in range(1, 11):
-			name = f"IMAX Hall {i}"
-			if not frappe.db.exists("Cinema Hall", {"hall_name": name}):
-				frappe.get_doc({
-					"doctype": "Cinema Hall",
-					"hall_name": name,
-					"property": random.choice(properties),
-					"capacity": 200,
-					"screen_type": "IMAX"
-				}).insert(ignore_permissions=True)
-
-		# 8. Marina (10 Berths)
-		for i in range(1, 11):
-			berth_id = f"BERTH-PRO-{i:03d}"
-			if not frappe.db.exists("Berth", {"berth_id": berth_id}):
-				frappe.get_doc({
-					"doctype": "Berth",
-					"berth_id": berth_id,
-					"property": random.choice(properties),
-					"length_limit": random.choice([40, 60, 100]),
-					"status": "Available",
-					"hourly_rate": random.randint(100, 500)
-				}).insert(ignore_permissions=True)
-
-		# 9. Cruise (20 Cabins)
+		menu_items = []
 		for i in range(1, 21):
-			cabin_no = f"SUITE-{100 + i}"
-			if not frappe.db.exists("Cruise Cabin", {"cabin_number": cabin_no}):
-				frappe.get_doc({
-					"doctype": "Cruise Cabin",
-					"cabin_number": cabin_no,
-					"vessel_name": "Ocean Monarch",
-					"cabin_type": "Suite",
-					"deck_level": random.randint(5, 12),
-					"status": "Available"
+			name = f"Signature Dish {i}"
+			if not frappe.db.exists("Menu Item", {"item_name": name}):
+				item = frappe.get_doc({
+					"doctype": "Menu Item",
+					"naming_series": "MENU-.YYYY.-",
+					"item_name": name,
+					"rate": random.randint(15, 100),
+					"category": random.choice(["Appetizer", "Main Course", "Dessert", "Beverage"])
 				}).insert(ignore_permissions=True)
+				menu_items.append(item.name)
+			else:
+				menu_items.append(frappe.db.get_value("Menu Item", {"item_name": name}))
 
-		# 10. Sustainability (20 Sensors)
-		for i in range(1, 21):
-			sensor_id = f"SENSOR-IOT-{i:04d}"
-			if not frappe.db.exists("IoT Sensor", {"sensor_id": sensor_id}):
-				frappe.get_doc({
-					"doctype": "IoT Sensor",
-					"sensor_id": sensor_id,
-					"sensor_type": random.choice(["Temperature", "Energy Meter", "Water Meter"]),
-					"status": "Active"
-				}).insert(ignore_permissions=True)
-
-		# 11. Spa (10 Therapists)
+		# 6. Reservations (10 entries)
+		reservations = []
 		for i in range(1, 11):
-			name = f"Expert Therapist {i}"
-			if not frappe.db.exists("Therapist", {"therapist_name": name}):
-				frappe.get_doc({
-					"doctype": "Therapist",
-					"naming_series": "THER-.YYYY.-",
-					"therapist_name": name,
-					"specialization": random.choice(["Massage", "Aromatherapy", "Skin Care"]),
-					"status": "Available"
-				}).insert(ignore_permissions=True)
+			check_in = add_days(today(), random.randint(-5, 5))
+			res = frappe.get_doc({
+				"doctype": "Reservation",
+				"naming_series": "RES-.YYYY.-",
+				"guest": random.choice(guests),
+				"property": random.choice(properties),
+				"room_type": random.choice(room_types),
+				"check_in_date": check_in,
+				"check_out_date": add_days(check_in, random.randint(1, 7)),
+				"status": "Confirmed",
+				"rate_per_night": random.randint(200, 1000)
+			}).insert(ignore_permissions=True)
+			reservations.append(res.name)
 
-		# 12. Security (10 Logs)
+		# 7. Laundry Orders (10 entries)
 		for i in range(1, 11):
-			try:
-				frappe.get_doc({
-					"doctype": "Visitor Log",
-					"naming_series": "VIS-.YYYY.-",
-					"visitor_name": f"Visitor {i}",
-					"purpose": "Business Meeting",
-					"status": "Checked In"
-				}).insert(ignore_permissions=True)
-			except:
-				pass
+			frappe.get_doc({
+				"doctype": "Laundry Order",
+				"naming_series": "LAU-.YYYY.-",
+				"guest": random.choice(guests),
+				"property": random.choice(properties),
+				"room": random.choice(rooms),
+				"status": "Pickup Requested",
+				"item_count": random.randint(1, 10),
+				"amount": random.randint(20, 150)
+			}).insert(ignore_permissions=True)
+
+		# 8. Lost and Found (5 entries)
+		for i in range(1, 6):
+			frappe.get_doc({
+				"doctype": "Lost and Found",
+				"naming_series": "LNF-.YYYY.-",
+				"item_description": random.choice(["iPhone 13", "Leather Wallet", "Keycard", "Sunglasses", "Watch"]),
+				"property": random.choice(properties),
+				"status": "In Custody",
+				"found_date": today()
+			}).insert(ignore_permissions=True)
+
+		# 9. Maintenance Requests (10 entries)
+		for i in range(1, 11):
+			frappe.get_doc({
+				"doctype": "Maintenance Request",
+				"naming_series": "MNT-.YYYY.-",
+				"property": random.choice(properties),
+				"room": random.choice(rooms),
+				"issue_description": random.choice(["AC not cooling", "Leaking faucet", "TV remote broken", "Light flicker"]),
+				"priority": random.choice(["Low", "Medium", "High"]),
+				"status": "Open"
+			}).insert(ignore_permissions=True)
+
+		# 10. FnB Orders (10 entries)
+		for i in range(1, 11):
+			order = frappe.get_doc({
+				"doctype": "FnB Order",
+				"naming_series": "FNBO-.YYYY.-",
+				"outlet": random.choice(outlets),
+				"status": "Open"
+			})
+			for _ in range(random.randint(1, 3)):
+				order.append("order_items", {
+					"item": random.choice(menu_items),
+					"quantity": random.randint(1, 3),
+					"rate": 50 # Simplified
+				})
+			order.insert(ignore_permissions=True)
 
 		frappe.db.commit()
 		print("Hyper-comprehensive global demo data setup completed successfully!")
