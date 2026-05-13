@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-13 12:40:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "member",
+  "fitness_class",
+  "booking_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Series",
+   "label": "Series",
+   "options": "CB-.YYYY.-",
+   "reqd": 1,
+   "default": "CB-.YYYY.-"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Guest Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fitness_class",
+   "fieldtype": "Link",
+   "label": "Class",
+   "options": "Fitness Class",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "label": "Booking Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Booked\nAttended\nCancelled",
+   "default": "Booked"
+  }
+ ],
+ "modified": "2024-05-13 12:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Membership Management",
+ "name": "Class Booking",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "states": []
+}
