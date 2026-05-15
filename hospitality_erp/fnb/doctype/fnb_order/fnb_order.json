@@ -28,7 +28,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "FNBO-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "FNBO-.YYYY.-"
   },
   {

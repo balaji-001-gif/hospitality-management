@@ -18,7 +18,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "ACT-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "ACT-.YYYY.-"
   },
   {

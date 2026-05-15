@@ -32,7 +32,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "GUEST-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "GUEST-.YYYY.-"
   },
   {

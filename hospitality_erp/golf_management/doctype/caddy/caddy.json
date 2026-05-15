@@ -16,7 +16,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "CAD-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "CAD-.YYYY.-"
   },
   {

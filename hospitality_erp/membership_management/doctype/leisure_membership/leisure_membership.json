@@ -21,7 +21,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "L-MEM-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "L-MEM-.YYYY.-"
   },
   {

@@ -44,7 +44,7 @@
    "label": "Series",
    "options": "RES-.YYYY.-",
    "default": "RES-.YYYY.-",
-   "reqd": 1
+   "reqd": 0
   },
   {
    "fieldname": "guest",

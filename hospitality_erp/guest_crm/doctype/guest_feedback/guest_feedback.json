@@ -28,7 +28,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "GFB-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "GFB-.YYYY.-"
   },
   {

@@ -20,7 +20,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "TIP-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "TIP-.YYYY.-"
   },
   {

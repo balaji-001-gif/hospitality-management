@@ -28,7 +28,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "NA-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "NA-.YYYY.-"
   },
   {

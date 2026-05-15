@@ -18,7 +18,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "CB-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "CB-.YYYY.-"
   },
   {

@@ -21,7 +21,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "RECOV-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "RECOV-.YYYY.-"
   },
   {

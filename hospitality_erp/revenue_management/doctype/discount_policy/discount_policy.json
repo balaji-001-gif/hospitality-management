@@ -19,7 +19,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "DP-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "DP-.YYYY.-"
   },
   {

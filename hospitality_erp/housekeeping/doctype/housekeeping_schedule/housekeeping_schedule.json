@@ -18,7 +18,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "HKS-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "HKS-.YYYY.-"
   },
   {

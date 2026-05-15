@@ -32,7 +32,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "PROP-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "PROP-.YYYY.-"
   },
   {

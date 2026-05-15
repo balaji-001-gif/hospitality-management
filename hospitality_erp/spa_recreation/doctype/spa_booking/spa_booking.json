@@ -23,7 +23,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "SPAB-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "SPAB-.YYYY.-"
   },
   {

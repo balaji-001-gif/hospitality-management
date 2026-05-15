@@ -18,7 +18,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "ADV-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "ADV-.YYYY.-"
   },
   {

@@ -21,7 +21,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "REC-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "REC-.YYYY.-"
   },
   {

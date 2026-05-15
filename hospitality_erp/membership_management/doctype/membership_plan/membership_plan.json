@@ -19,7 +19,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "MP-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "MP-.YYYY.-"
   },
   {

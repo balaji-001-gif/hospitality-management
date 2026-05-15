@@ -17,7 +17,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "PRE-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "PRE-.YYYY.-"
   },
   {

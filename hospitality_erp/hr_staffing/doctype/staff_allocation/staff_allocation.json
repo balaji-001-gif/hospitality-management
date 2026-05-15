@@ -20,7 +20,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "SA-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "SA-.YYYY.-"
   },
   {

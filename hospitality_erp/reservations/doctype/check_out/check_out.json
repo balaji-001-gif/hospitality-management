@@ -28,7 +28,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "CO-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "CO-.YYYY.-"
   },
   {

@@ -23,7 +23,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "OF-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "OF-.YYYY.-"
   },
   {

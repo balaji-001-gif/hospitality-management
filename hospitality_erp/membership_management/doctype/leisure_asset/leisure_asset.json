@@ -20,7 +20,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "L-ASSET-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "L-ASSET-.YYYY.-"
   },
   {

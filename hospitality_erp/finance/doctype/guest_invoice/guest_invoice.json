@@ -34,7 +34,7 @@
    "fieldtype": "Series",
    "label": "Series",
    "options": "GINV-.YYYY.-",
-   "reqd": 1,
+   "reqd": 0,
    "default": "GINV-.YYYY.-"
   },
   {

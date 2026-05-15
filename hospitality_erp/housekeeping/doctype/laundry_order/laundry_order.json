@@ -26,7 +26,7 @@
    "label": "Series",
    "options": "LAU-.YYYY.-",
    "default": "LAU-.YYYY.-",
-   "reqd": 1
+   "reqd": 0
   },
   {
    "fieldname": "guest",
