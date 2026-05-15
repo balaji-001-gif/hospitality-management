@@ -1,7 +1,7 @@
 {
   "attach_print": 0,
   "channel": "System Notification",
-  "condition": "doc.energy_usage_kwh > 500 or doc.water_usage_liters > 5000",
+  "condition": "(doc.energy_usage_kwh or 0) > 500 or (doc.water_usage_liters or 0) > 5000",
   "creation": "2024-05-08 00:00:00.000000",
   "doctype": "Notification",
   "document_type": "Sustainability Log",
